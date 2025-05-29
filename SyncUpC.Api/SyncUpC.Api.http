@@ -1,0 +1,6 @@
+@SyncUpC.Api_HostAddress = http://localhost:5287
+
+GET {{SyncUpC.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gWwNyf5fhZs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Api\\SyncUpC.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dtzda\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\dtzda\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
