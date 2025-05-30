@@ -1,0 +1,13 @@
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\bin\Debug\net9.0\SyncUpC.Domain.deps.json
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\bin\Debug\net9.0\SyncUpC.Domain.dll
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\bin\Debug\net9.0\SyncUpC.Domain.pdb
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.csproj.AssemblyReference.cache
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.AssemblyInfoInputs.cache
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.AssemblyInfo.cs
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.csproj.CoreCompileInputs.cache
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.sourcelink.json
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.dll
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\refint\SyncUpC.Domain.dll
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\SyncUpC.Domain.pdb
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Domain\obj\Debug\net9.0\ref\SyncUpC.Domain.dll
