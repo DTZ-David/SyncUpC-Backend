@@ -15,10 +15,10 @@ public class UnitOfWork : IUnitOfWork
 
     public IClaimService ClaimsService { get; }
 
-    public IStudentService StudentService {  get; }
+    public IUserService StudentService {  get; }
 
     public UnitOfWork(IAccountService accountService,
-                      IStudentService studentService,
+                      IUserService studentService,
                       IClaimService claimsService)
     {
         AccountService = accountService;

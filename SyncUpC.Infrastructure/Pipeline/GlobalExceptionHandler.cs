@@ -8,7 +8,6 @@ using System.Text.Json.Serialization;
 
 namespace SyncUpC.Infraestructure.Pipeline;
 
-
 public class GlobalExceptionHandler : IMiddleware
 {
     private readonly ILogger<GlobalExceptionHandler> _logger;
@@ -31,33 +30,45 @@ public class GlobalExceptionHandler : IMiddleware
         }
         catch (Exception ex)
         {
-            var message = ex.Message;
-            var modelResponse = new Response<object>() { Message = message };
-
-            context.Response.Clear();
-            context.Response.ContentType = "application/json";
-
-            switch (ex)
-            {
-                case BusinessException error:
-                    await error.HandleError(context, modelResponse);
-                    break;
-                case FluentValidationException validationError:
-                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                    modelResponse.StatusCode = StatusCodes.Status400BadRequest;
-                    modelResponse.IsSuccess = false;
-                    modelResponse.Message = "Errores de validación";
-                    modelResponse.Errors = validationError.Errors;
-                    break;
-
-                default:
-                    context.Response.StatusCode = (int)MessageStatusCode.ServerError;
-                    modelResponse.StatusCode = (int)MessageStatusCode.ServerError;
-                    _logger.LogError("{Message}", ex.StackTrace);
-                    break;
-            }
-
-            await JsonSerializer.SerializeAsync(context.Response.Body, modelResponse, _jsonSerializerOptions);
+            _logger.LogError(ex, "Exception occurred: {Message}", ex.Message);
+            await HandleExceptionAsync(context, ex);
         }
+    }
+
+    private async Task HandleExceptionAsync(HttpContext context, Exception ex)
+    {
+        context.Response.Clear();
+        context.Response.ContentType = "application/json";
+
+        var modelResponse = new Response<object>();
+
+        switch (ex)
+        {
+            case BusinessException businessEx:
+                context.Response.StatusCode = businessEx.StatusCode;
+                modelResponse.StatusCode = businessEx.StatusCode;
+                modelResponse.IsSuccess = false;
+                modelResponse.Message = businessEx.Message;
+                break;
+
+            case FluentValidationException validationEx:
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                modelResponse.StatusCode = StatusCodes.Status400BadRequest;
+                modelResponse.IsSuccess = false;
+                modelResponse.Message = "Errores de validación";
+                modelResponse.Errors = validationEx.Errors;
+                break;
+
+            default:
+                context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                modelResponse.StatusCode = StatusCodes.Status500InternalServerError;
+                modelResponse.IsSuccess = false;
+                modelResponse.Message = "Error interno del servidor";
+                _logger.LogError(ex, "Unhandled exception occurred");
+                break;
+        }
+
+        var json = JsonSerializer.Serialize(modelResponse, _jsonSerializerOptions);
+        await context.Response.WriteAsync(json);
     }
 }

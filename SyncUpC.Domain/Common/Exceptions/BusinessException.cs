@@ -6,7 +6,7 @@ namespace SyncUpC.Domain.Common.Exceptions;
 
 public class BusinessException : Exception
 {
-    private int StatusCode { get; set; }
+    public int StatusCode { get; set; }
     public BusinessException(string message, int statusCode) : base(message)
     {
         StatusCode = statusCode;

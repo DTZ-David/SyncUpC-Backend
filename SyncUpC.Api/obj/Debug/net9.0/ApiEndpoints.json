@@ -1,6 +1,56 @@
 [
   {
     "ContainingType": "SyncUpC.WebApi.Controllers.User.UserController",
+    "Method": "AuthenticationAppMovil",
+    "RelativePath": "api/user/loginapp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDto",
+        "Type": "SyncUpC.Application.UseCases.User.Students.Dtos.AccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SyncUpC.Domain.Common.Wrappers.CustomResponse.Response\u00601[[SyncUpC.Application.UseCases.User.Students.Dtos.AuthenticationUserDto, SyncUpC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncUpC.WebApi.Controllers.User.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/user/registerstudent",
     "HttpMethod": "POST",

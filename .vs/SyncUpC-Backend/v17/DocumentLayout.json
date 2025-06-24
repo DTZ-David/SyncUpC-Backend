@@ -3,48 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\career.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\career.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\pipeline\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\pipeline\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\common\\exceptions\\businessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\common\\exceptions\\businessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\notificationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\notificationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\extensions\\validation\\validationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\extensions\\validation\\validationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\notificationpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\notificationpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\pipeline\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\pipeline\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\pipeline\\secutiryheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\pipeline\\secutiryheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\adapters\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\adapters\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\staffmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\staffmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\login\\authenticationusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\login\\authenticationusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\login\\authenticationusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\login\\authenticationusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\common\\enums\\messagestatuscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\common\\enums\\messagestatuscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C8CF3A-2870-4C87-9B8D-28D6DC584834}|SyncUpC.Api\\SyncUpC.WebApi.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64C8CF3A-2870-4C87-9B8D-28D6DC584834}|SyncUpC.Api\\SyncUpC.WebApi.csproj|solutionrelative:syncupc.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\entities\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\entities\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.infrastructure\\pipeline\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6987FD3D-D3B7-4A41-8930-EF9D52BDEE48}|SyncUpC.Infrastructure\\SyncUpC.Infraestructure.csproj|solutionrelative:syncupc.infrastructure\\pipeline\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\dtos\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\dtos\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\commands\\createstudent\\createstudentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.domain\\ports\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46A187A5-1CC5-42F7-A578-5C953965665B}|SyncUpC.Domain\\SyncUpC.Domain.csproj|solutionrelative:syncupc.domain\\ports\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|c:\\users\\dtzda\\onedrive\\documentos\\github\\syncupc-backend\\syncupc.application\\usecases\\user\\students\\dtos\\authenticationuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80182A23-389E-478A-A800-7ABC57FC5584}|SyncUpC.Application\\SyncUpC.Application.csproj|solutionrelative:syncupc.application\\usecases\\user\\students\\dtos\\authenticationuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,145 +90,248 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Faculty.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\Faculty.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\Faculty.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\Faculty.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\Faculty.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Title": "BusinessException.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Common\\Exceptions\\BusinessException.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Domain\\Common\\Exceptions\\BusinessException.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Common\\Exceptions\\BusinessException.cs",
+              "RelativeToolTip": "SyncUpC.Domain\\Common\\Exceptions\\BusinessException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:33:50.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Career.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\Career.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\Career.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\Career.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\Career.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:33:41.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotificationPreferences.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\NotificationPreferences.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\NotificationPreferences.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\NotificationPreferences.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\NotificationPreferences.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:31:53.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateStudentValidation.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
-              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:23:02.179Z"
+              "WhenOpened": "2025-06-24T20:29:16.761Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NotificationSetting.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\NotificationSetting.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\NotificationSetting.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\NotificationSetting.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\NotificationSetting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Title": "ValidationExtension.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Extensions\\Validation\\ValidationExtension.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Infrastructure\\Extensions\\Validation\\ValidationExtension.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Extensions\\Validation\\ValidationExtension.cs",
+              "RelativeToolTip": "SyncUpC.Infrastructure\\Extensions\\Validation\\ValidationExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:22:18.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T20:23:49.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StaffMember.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\StaffMember.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\StaffMember.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\StaffMember.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\StaffMember.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Pipeline\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Infrastructure\\Pipeline\\ValidationBehavior.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Pipeline\\ValidationBehavior.cs",
+              "RelativeToolTip": "SyncUpC.Infrastructure\\Pipeline\\ValidationBehavior.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:12:58.598Z"
+              "WhenOpened": "2025-06-24T20:23:26.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\Student.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\Student.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\Student.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABEAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "SecutiryHeader.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Pipeline\\SecutiryHeader.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Infrastructure\\Pipeline\\SecutiryHeader.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Pipeline\\SecutiryHeader.cs",
+              "RelativeToolTip": "SyncUpC.Infrastructure\\Pipeline\\SecutiryHeader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:12:43.255Z"
+              "WhenOpened": "2025-06-24T20:23:25.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateStudentCommand.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
-              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:20:09.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateStudentCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs*",
-              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:20:07.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\User.cs",
-              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\User.cs",
-              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\User.cs",
-              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAADDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:01:48.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Pipeline\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "SyncUpC.Infrastructure\\Pipeline\\GlobalExceptionHandler.cs",
               "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Pipeline\\GlobalExceptionHandler.cs",
               "RelativeToolTip": "SyncUpC.Infrastructure\\Pipeline\\GlobalExceptionHandler.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAA2wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T17:01:39.45Z"
+              "WhenOpened": "2025-06-24T20:23:18.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Adapters\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Infrastructure\\Adapters\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Adapters\\UnitOfWork.cs",
+              "RelativeToolTip": "SyncUpC.Infrastructure\\Adapters\\UnitOfWork.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T20:23:05.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MessageStatusCode.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Common\\Enums\\MessageStatusCode.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Domain\\Common\\Enums\\MessageStatusCode.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Common\\Enums\\MessageStatusCode.cs",
+              "RelativeToolTip": "SyncUpC.Domain\\Common\\Enums\\MessageStatusCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T20:05:55.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Startup.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Infrastructure\\Startup.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Infrastructure\\Startup.cs",
+              "RelativeToolTip": "SyncUpC.Infrastructure\\Startup.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:59:14.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\User.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Domain\\Entities\\User\\User.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Entities\\User\\User.cs",
+              "RelativeToolTip": "SyncUpC.Domain\\Entities\\User\\User.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:54:08.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentDto.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\StudentDto.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\StudentDto.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\StudentDto.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\StudentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:43:54.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateStudentCommand.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:38:13.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateStudentValidation.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentValidation.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA2wD4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:38:07.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Ports\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Domain\\Ports\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Ports\\Services\\IUserService.cs",
+              "RelativeToolTip": "SyncUpC.Domain\\Ports\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:33:04.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateStudentCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\CreateStudent\\CreateStudentCommandHandler.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA2wEcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:32:59.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Domain\\Services\\StudentService.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Services\\StudentService.cs",
+              "RelativeToolTip": "SyncUpC.Domain\\Services\\StudentService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:21:25.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Api\\Controllers\\User\\UserController.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Api\\Controllers\\User\\UserController.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Api\\Controllers\\User\\UserController.cs",
+              "RelativeToolTip": "SyncUpC.Api\\Controllers\\User\\UserController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwCgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:17:47.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Domain\\Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Domain\\Services\\AccountService.cs",
+              "RelativeToolTip": "SyncUpC.Domain\\Services\\AccountService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAmwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T19:15:28.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthenticationUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\AuthenticationUserDto.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\AuthenticationUserDto.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\AuthenticationUserDto.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Dtos\\AuthenticationUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T18:50:35.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthenticationUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommandHandler.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommandHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwBUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T18:45:47.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthenticationUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommand.cs",
+              "RelativeDocumentMoniker": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommand.cs",
+              "ToolTip": "C:\\Users\\dtzda\\OneDrive\\Documentos\\GitHub\\SyncUpC-Backend\\SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommand.cs",
+              "RelativeToolTip": "SyncUpC.Application\\UseCases\\User\\Students\\Commands\\Login\\AuthenticationUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T18:45:39.076Z"
             }
           ]
         }

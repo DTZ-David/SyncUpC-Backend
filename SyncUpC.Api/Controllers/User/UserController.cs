@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.User.Students.Commands.CreateStudent;
+using SyncUpC.Application.UseCases.User.Students.Commands.Login;
 using SyncUpC.Application.UseCases.User.Students.Dtos;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.WebApi.Common.Constants;
@@ -24,6 +25,19 @@ public class UserController : BaseController
     [HttpPost("registerStudent")]
     public async Task<ActionResult<Response<StudentDto>>> CreateUser([FromBody] CreateStudentCommand command)
     {
+        return await Mediator.Send(command);
+    }
+
+    /// <summary>
+    /// Authenticate user in mobile apps
+    /// </summary>
+    /// <remarks>
+    /// To authenticate in mobile apps it is necessary to provide the email and password
+    /// </remarks>
+    [HttpPost("loginApp")]
+    public async Task<ActionResult<Response<AuthenticationUserDto>>> AuthenticationAppMovil([FromBody] AccountDto accountDto)
+    {
+        var command = new AuthenticationUserCommand(accountDto.Email, accountDto.Password);
         return await Mediator.Send(command);
     }
 }

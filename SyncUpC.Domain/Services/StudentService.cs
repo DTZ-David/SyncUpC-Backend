@@ -7,24 +7,24 @@ using SyncUpC.Domain.Ports.Services;
 namespace SyncUpC.Domain.Services;
 
 [ApplicationService]
-public class StudentService : IStudentService
+public class StudentService : IUserService
 {
-    private readonly IGenericRepository<Student> _studentRepository;
+    private readonly IGenericRepository<User> _studentRepository;
 
 
-    public StudentService(IGenericRepository<Student> studentRepository)
+    public StudentService(IGenericRepository<User> studentRepository)
     {
         _studentRepository = studentRepository;
       
     }
 
-    public async Task<Student> CreateStudentAsync(Student user)
+    public async Task<User> CreateUserAsync(User user)
     {
         await _studentRepository.Add(user);
         return user;
     }
 
-    public async Task<Student> GetStudentByEmail(string email)
+    public async Task<User> GetUserByEmail(string email)
     {
         var user = (await _studentRepository.FindAsync(
              u => u.Email == email)).FirstOrDefault();

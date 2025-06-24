@@ -1,4 +1,5 @@
-﻿using SyncUpC.Domain.Entities.Base;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using SyncUpC.Domain.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace SyncUpC.Domain.Entities.User;
 
+[BsonDiscriminator(RootClass = true)]
+[BsonKnownTypes(typeof(Student), typeof(StaffMember))]
 public class User : BaseEntity<string>
 {
     public User(string email, string password, string name, string lastName, string phoneNumber, string role, string profilePicture, bool isActive, NotificationPreferences notificationPreferences)

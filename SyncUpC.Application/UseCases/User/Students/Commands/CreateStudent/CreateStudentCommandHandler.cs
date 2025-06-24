@@ -69,7 +69,7 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
             notificationPreferences: notificationPreferences
         );
 
-        await _unitOfWork.StudentService.CreateStudentAsync(student);
+        await _unitOfWork.StudentService.CreateUserAsync(student);
 
         var facultyDto = new FacultyDto(Name: faculty.Name);
         var careerDto = new CareerDto(Name: career.Name, facultyDto);

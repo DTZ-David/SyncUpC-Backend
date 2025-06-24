@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SyncUpC.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+505c394a0b23ea5d0c2da0aaad008a10f12307e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01a54c9946eb67590f2f7f42c7767d5b84fb4008")]
 [assembly: System.Reflection.AssemblyProductAttribute("SyncUpC.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SyncUpC.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

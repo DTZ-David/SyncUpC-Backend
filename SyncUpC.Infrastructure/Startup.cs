@@ -36,16 +36,21 @@ public static class Startup
     }
 
     public static void UseInfrastructure
-    (
-        this IApplicationBuilder builder,
-        IWebHostEnvironment environment,
-        IConfigurationBuilder configuration
-    )
+(
+    this IApplicationBuilder builder,
+    IWebHostEnvironment environment,
+    IConfigurationBuilder configuration
+)
     {
-        builder
-            .UseSwagger(environment)
-            .UseAuthentication()
-            .UseAuthorization()
-            .UseCustomMiddleware();
+        // 1. Usa el middleware de errores globales lo más arriba posible
+        builder.UseCustomMiddleware();
+
+        // 2. Swagger (si está en dev)
+        builder.UseSwagger(environment);
+
+        // 3. Autenticación y autorización
+        builder.UseAuthentication();
+        builder.UseAuthorization();
     }
+
 }

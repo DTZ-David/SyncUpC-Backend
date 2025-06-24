@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SyncUpC.Domain.Ports.Services;
 
-public interface IStudentService
+public interface IUserService
 {
-    Task<Student> CreateStudentAsync(Student user);
-    Task<Student> GetStudentByEmail (string email);
+    Task<User> CreateUserAsync(User user);
+    Task<User> GetUserByEmail (string email);
 }
