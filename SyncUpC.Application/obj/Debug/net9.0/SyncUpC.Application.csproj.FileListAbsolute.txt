@@ -11,3 +11,6 @@ C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\ob
 C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\obj\Debug\net9.0\refint\SyncUpC.Application.dll
 C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\obj\Debug\net9.0\SyncUpC.Application.pdb
 C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\obj\Debug\net9.0\ref\SyncUpC.Application.dll
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\bin\Debug\net9.0\SyncUpC.Domain.dll
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\bin\Debug\net9.0\SyncUpC.Domain.pdb
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Application\obj\Debug\net9.0\SyncUpC..F73E9321.Up2Date

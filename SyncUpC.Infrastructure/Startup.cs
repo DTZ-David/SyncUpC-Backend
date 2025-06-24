@@ -1,18 +1,18 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SyncUpC.Infraestructure.Extensions;
+using SyncUpC.Infraestructure.Extensions.Claims;
+using SyncUpC.Infraestructure.Extensions.Feature;
+using SyncUpC.Infraestructure.Extensions.JsonWebToken;
+using SyncUpC.Infraestructure.Extensions.Mapper;
 using SyncUpC.Infraestructure.Extensions.Mediador;
+using SyncUpC.Infraestructure.Extensions.Middleware;
 using SyncUpC.Infraestructure.Extensions.Persistence;
 using SyncUpC.Infraestructure.Extensions.Services;
-using SyncUpC.Infraestructure.Extensions.Mapper;
-using SyncUpC.Infraestructure.Extensions.Feature;
-using SyncUpC.Infraestructure.Extensions.Claims;
-using SyncUpC.Infraestructure.Extensions.Middleware;
 using SyncUpC.Infraestructure.Extensions.Swagger;
-using SyncUpC.Infraestructure.Extensions.JsonWebToken;
+using SyncUpC.Infraestructure.Extensions.Validation;
 namespace SyncUpC.Infraestructure;
 
 
@@ -27,6 +27,7 @@ public static class Startup
             .AddApplicationServices(ProjectConstant.DomainProject)
             .AddSwagger()
             .AddMapper()
+            .AddValidator()
             .AddPersistence(configuration)
             .AddClaims()
             .AddAuthorization()

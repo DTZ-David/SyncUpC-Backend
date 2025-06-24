@@ -5,6 +5,7 @@ namespace SyncUpC.Domain.Ports;
 
 public interface IUnitOfWork
 {
-    IAccountService AccountService { get; }
+    IAccountService AccountService { get; } 
+    IStudentService StudentService { get; }
     IClaimService ClaimsService { get; }
 }

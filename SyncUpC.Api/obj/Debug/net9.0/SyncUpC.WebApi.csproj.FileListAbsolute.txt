@@ -85,3 +85,5 @@ C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Api\bin\Debug\
 C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Api\bin\Debug\net9.0\SyncUpC.Application.pdb
 C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Api\bin\Debug\net9.0\SyncUpC.Infraestructure.pdb
 C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Api\bin\Debug\net9.0\SyncUpC.Domain.pdb
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Api\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\dtzda\OneDrive\Documentos\GitHub\SyncUpC-Backend\SyncUpC.Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

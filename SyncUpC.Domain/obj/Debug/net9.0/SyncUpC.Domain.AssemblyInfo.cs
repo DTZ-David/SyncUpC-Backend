@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SyncUpC.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba5fefe0f381e81af9317767999511b32a792522")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+505c394a0b23ea5d0c2da0aaad008a10f12307e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("SyncUpC.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SyncUpC.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,16 +1,24 @@
 [
   {
     "ContainingType": "SyncUpC.WebApi.Controllers.User.UserController",
-    "Method": "Test",
-    "RelativePath": "api/user/test",
-    "HttpMethod": "GET",
+    "Method": "CreateUser",
+    "RelativePath": "api/user/registerstudent",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "SyncUpC.Application.UseCases.User.Students.Commands.CreateStudent.CreateStudentCommand",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "SyncUpC.Domain.Common.Wrappers.CustomResponse.Response\u00601[[SyncUpC.Application.UseCases.User.Students.Dtos.StudentDto, SyncUpC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
         "StatusCode": 200
       },
       {

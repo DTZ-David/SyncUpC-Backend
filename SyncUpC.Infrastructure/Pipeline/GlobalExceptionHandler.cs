@@ -42,9 +42,14 @@ public class GlobalExceptionHandler : IMiddleware
                 case BusinessException error:
                     await error.HandleError(context, modelResponse);
                     break;
-                case FluentValidationException error:
-                    await error.HandleError(context, modelResponse);
+                case FluentValidationException validationError:
+                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                    modelResponse.StatusCode = StatusCodes.Status400BadRequest;
+                    modelResponse.IsSuccess = false;
+                    modelResponse.Message = "Errores de validación";
+                    modelResponse.Errors = validationError.Errors;
                     break;
+
                 default:
                     context.Response.StatusCode = (int)MessageStatusCode.ServerError;
                     modelResponse.StatusCode = (int)MessageStatusCode.ServerError;

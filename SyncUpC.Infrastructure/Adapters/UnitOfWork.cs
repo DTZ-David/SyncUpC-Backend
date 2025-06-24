@@ -14,17 +14,16 @@ public class UnitOfWork : IUnitOfWork
     public IAccountService AccountService { get; }
 
     public IClaimService ClaimsService { get; }
-   
+
+    public IStudentService StudentService {  get; }
 
     public UnitOfWork(IAccountService accountService,
-                    
-                      IClaimService claimsService
-                    )
+                      IStudentService studentService,
+                      IClaimService claimsService)
     {
         AccountService = accountService;
-        
+        StudentService = studentService;
         ClaimsService = claimsService;
-       
     }
 
 }
