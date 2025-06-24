@@ -1,0 +1,29 @@
+# Compilación
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Sistema
+*.DS_Store
+Thumbs.db
+
+# Otros
+*.db
+*.bak
+*.cache
+*.ide
+
+# Config locales
+appsettings.Development.json
