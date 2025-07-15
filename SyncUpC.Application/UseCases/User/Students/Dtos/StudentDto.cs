@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SyncUpC.Application.UseCases.User.Students.Dtos;
+﻿namespace SyncUpC.Application.UseCases.User.Students.Dtos;
 
 
 public record StudentDto(

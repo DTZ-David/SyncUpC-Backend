@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SyncUpC.Domain.Entities.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,4 +11,5 @@ namespace SyncUpC.Domain.Ports.Services;
 public interface IAccountService
 {
     public Task<string> ValidateMobileApp(string email, string password);
+
 }

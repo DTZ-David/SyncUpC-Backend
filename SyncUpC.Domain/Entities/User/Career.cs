@@ -1,23 +1,18 @@
 ﻿using SyncUpC.Domain.Entities.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SyncUpC.Domain.Entities.User
 {
-    public class Career 
+    public class Career : BaseEntity<string>
     {
-        public Career(string id, string name, Faculty faculty)
+        public Career(string name, string faculty)
         {
-            Id = id;
+
             Name = name;
-            Faculty = faculty;
+            FacultyId = faculty;
         }
 
-        public string Id { get; set; }
+
         public string Name { get; set; }
-        public Faculty Faculty { get; set; }
+        public string FacultyId { get; set; }
     }
 }

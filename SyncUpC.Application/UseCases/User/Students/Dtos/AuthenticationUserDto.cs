@@ -9,7 +9,8 @@ namespace SyncUpC.Application.UseCases.User.Students.Dtos;
 public record AuthenticationUserDto(
  string Token,
  string Name,
- string ProfilePicture
+ string ProfilePicture,
+ string Role
 );
 
 public record AccountDto(string Email, string Password);

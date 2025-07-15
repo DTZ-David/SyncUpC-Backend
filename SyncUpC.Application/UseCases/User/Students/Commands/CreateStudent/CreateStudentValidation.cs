@@ -60,7 +60,7 @@ public class CreateStudentValidation : AbstractValidator<CreateStudentCommand>
 
     private async Task<bool> BeUniqueEmailAsync(string email, CancellationToken cancellationToken)
     {
-        var existingUser = await _unitOfWork.StudentService.GetUserByEmail(email);
+        var existingUser = await _unitOfWork.UserService.GetUserByEmail(email);
         return existingUser == null;
     }
 

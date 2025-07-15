@@ -1,11 +1,6 @@
 ﻿using SyncUpC.Domain.Ports;
 using SyncUpC.Domain.Ports.Configuration.Claims;
 using SyncUpC.Domain.Ports.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SyncUpC.Infraestructure.Adapters;
 
@@ -15,15 +10,27 @@ public class UnitOfWork : IUnitOfWork
 
     public IClaimService ClaimsService { get; }
 
-    public IUserService StudentService {  get; }
+    public IEventService EventService { get; }
+
+    public IUserService UserService { get; }
+
+    public IFacultyService FacultyService { get; }
+
+    public ICareerService CareerService { get; }
 
     public UnitOfWork(IAccountService accountService,
                       IUserService studentService,
-                      IClaimService claimsService)
+                      IClaimService claimsService,
+                      IEventService eventService,
+                      ICareerService careerService,
+                      IFacultyService facultyService)
     {
         AccountService = accountService;
-        StudentService = studentService;
+        UserService = studentService;
         ClaimsService = claimsService;
+        CareerService = careerService;
+        FacultyService = facultyService;
+        EventService = eventService;
     }
 
 }

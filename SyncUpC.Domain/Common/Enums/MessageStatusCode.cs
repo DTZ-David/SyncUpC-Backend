@@ -3,7 +3,7 @@ namespace SyncUpC.Domain.Common.Enums;
 
 public enum MessageStatusCode
 {
-    Succes = 200,
+    Success = 200,
     Create = 201,
     BadRequest = 400,
     Unauthorized = 401,

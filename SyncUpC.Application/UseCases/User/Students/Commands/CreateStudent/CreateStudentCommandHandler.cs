@@ -3,7 +3,6 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.User.Students.Dtos;
 using SyncUpC.Domain.Common.Enums;
-using SyncUpC.Domain.Common.Exceptions;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.Domain.Entities.User;
 using SyncUpC.Domain.Ports;
@@ -25,35 +24,35 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
 
     public async Task<ActionResult<Response<StudentDto>>> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
     {
-        var faculty = new Faculty("685ad08eb1262f0763410dc5", "Ingeniería");
-      
-        var career = new Career("665f4d2d1c9d440001fcf001","Ingeniería de Sistemas", faculty);
+        var faculty = new Faculty("Ingeniería");
+
+        var career = new Career("Ingeniería de Sistemas", "");
 
         var notificationPreferences = new NotificationPreferences
         (
             eventReminders: new NotificationSetting
             (
-                push : request.NotificationPreferences.EventReminder.Push,
-                email : request.NotificationPreferences.EventReminder.Email,
-                whatsApp : request.NotificationPreferences.EventReminder.WhatsApp
+                push: request.NotificationPreferences.EventReminder.Push,
+                email: request.NotificationPreferences.EventReminder.Email,
+                whatsApp: request.NotificationPreferences.EventReminder.WhatsApp
             ),
-            eventUpdates : new NotificationSetting
+            eventUpdates: new NotificationSetting
             (
-                push : request.NotificationPreferences.EventUpdate.Push,
-                email : request.NotificationPreferences.EventUpdate.Email,
-                whatsApp : request.NotificationPreferences.EventUpdate.WhatsApp
+                push: request.NotificationPreferences.EventUpdate.Push,
+                email: request.NotificationPreferences.EventUpdate.Email,
+                whatsApp: request.NotificationPreferences.EventUpdate.WhatsApp
             ),
-            forumReplies : new NotificationSetting
+            forumReplies: new NotificationSetting
             (
-                push : request.NotificationPreferences.ForumReply.Push,
-                email : request.NotificationPreferences.ForumReply.Email,
-                whatsApp : request.NotificationPreferences.ForumReply.WhatsApp
+                push: request.NotificationPreferences.ForumReply.Push,
+                email: request.NotificationPreferences.ForumReply.Email,
+                whatsApp: request.NotificationPreferences.ForumReply.WhatsApp
             ),
-            forumMentions : new NotificationSetting
+            forumMentions: new NotificationSetting
             (
-                push : request.NotificationPreferences.ForumMention.Push,
-                email : request.NotificationPreferences.ForumMention.Email,
-                whatsApp : request.NotificationPreferences.ForumMention.WhatsApp
+                push: request.NotificationPreferences.ForumMention.Push,
+                email: request.NotificationPreferences.ForumMention.Email,
+                whatsApp: request.NotificationPreferences.ForumMention.WhatsApp
             )
         );
 
@@ -69,7 +68,7 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
             notificationPreferences: notificationPreferences
         );
 
-        await _unitOfWork.StudentService.CreateUserAsync(student);
+        await _unitOfWork.UserService.CreateUserAsync(student);
 
         var facultyDto = new FacultyDto(Name: faculty.Name);
         var careerDto = new CareerDto(Name: career.Name, facultyDto);

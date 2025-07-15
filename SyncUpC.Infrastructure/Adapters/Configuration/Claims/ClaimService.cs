@@ -18,20 +18,24 @@ public class ClaimService : IClaimService
     public Task<UserClaim> GetUserClaim()
     {
         var user = new UserClaim(GetClaim(ClaimOption.UserId),
-            GetClaim(ClaimOption.Email));
+            GetClaim(ClaimOption.Email),
+            GetClaim(ClaimOption.Role));
         return Task.FromResult(user);
     }
 
     public string GetClaim(string name)
     {
-        if (_httpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated ?? false)
+        if (_httpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated == true)
         {
-            var currentUser = (ClaimsIdentity)_httpContextAccessor.HttpContext.User.Identity;
+            var currentUser = (ClaimsIdentity)_httpContextAccessor.HttpContext.User.Identity!;
+            var claim = currentUser.Claims.FirstOrDefault(c => c.Type.Equals(name, StringComparison.OrdinalIgnoreCase));
 
-            return currentUser.Claims.First(c => c.Type.Equals(name)).Value;
+            if (claim is not null)
+                return claim.Value;
         }
 
         return string.Empty;
     }
+
 
 }

@@ -11,4 +11,5 @@ public interface IUserService
 {
     Task<User> CreateUserAsync(User user);
     Task<User> GetUserByEmail (string email);
+    Task<User> GetUserById (string id);
 }

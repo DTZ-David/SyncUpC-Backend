@@ -1,3 +1,3 @@
 ﻿
 namespace SyncUpC.Domain.Settings.Claims;
-public record UserClaim(string UserId, string Email);
+public record UserClaim(string UserId, string Email, string Role);
