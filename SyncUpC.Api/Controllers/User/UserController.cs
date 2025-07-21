@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.User.Commands.CreateStudent;
 using SyncUpC.Application.UseCases.User.Commands.Login;
+using SyncUpC.Application.UseCases.User.Commands.RefreshToken;
 using SyncUpC.Application.UseCases.User.Dtos;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.WebApi.Common.Constants;
@@ -38,6 +39,12 @@ public class UserController : BaseController
     public async Task<ActionResult<Response<AuthenticationUserDto>>> AuthenticationAppMovil([FromBody] AccountDto accountDto)
     {
         var command = new AuthenticationUserCommand(accountDto.Email, accountDto.Password);
+        return await Mediator.Send(command);
+    }
+
+    [HttpPost("refresh-token")]
+    public async Task<ActionResult<Response<TokenDto>>> Refresh([FromBody] RefreshTokenCommand command)
+    {
         return await Mediator.Send(command);
     }
 }

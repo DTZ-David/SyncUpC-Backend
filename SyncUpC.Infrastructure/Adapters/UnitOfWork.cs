@@ -1,5 +1,6 @@
 ﻿using SyncUpC.Domain.Ports;
 using SyncUpC.Domain.Ports.Configuration.Claims;
+using SyncUpC.Domain.Ports.Configuration.JsonWebToken;
 using SyncUpC.Domain.Ports.Services;
 
 namespace SyncUpC.Infraestructure.Adapters;
@@ -19,6 +20,7 @@ public class UnitOfWork : IUnitOfWork
     public ICareerService CareerService { get; }
 
     public IForumService ForumService { get; }
+    public IRefreshTokenService RefreshTokenService { get; }
 
     public UnitOfWork(IAccountService accountService,
                       IUserService studentService,
@@ -26,10 +28,12 @@ public class UnitOfWork : IUnitOfWork
                       IEventService eventService,
                       ICareerService careerService,
                       IFacultyService facultyService,
-                      IForumService forumService)
+                      IForumService forumService,
+                      IRefreshTokenService refreshTokenService)
     {
         AccountService = accountService;
         UserService = studentService;
+        RefreshTokenService = refreshTokenService;
         ClaimsService = claimsService;
         CareerService = careerService;
         FacultyService = facultyService;

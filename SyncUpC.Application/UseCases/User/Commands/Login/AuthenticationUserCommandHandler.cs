@@ -19,25 +19,28 @@ public class AuthenticationUserCommandHandler : IRequestHandler<AuthenticationUs
 
     public async Task<ActionResult<Response<AuthenticationUserDto>>> Handle(AuthenticationUserCommand request, CancellationToken cancellationToken)
     {
-        var token = await _unitOfWork.AccountService.ValidateMobileApp(request.email, request.password);
+        // Acceso a token generado desde AccountService
+        var accessToken = await _unitOfWork.AccountService.ValidateMobileApp(request.email, request.password);
 
         var user = await _unitOfWork.UserService.GetUserByEmail(request.email);
 
         if (user is null)
         {
-            throw new BusinessException($"Usuario no encontrado.",
-                (int)MessageStatusCode.NotFound);
+            throw new BusinessException("Usuario no encontrado.", (int)MessageStatusCode.NotFound);
         }
 
-        var userDetails = new AuthenticationUserDto(
-                Token: token,
-                Name: user.Name + " " + user.LastName,
-                ProfilePicture: user.ProfilePicture!,
-                Role: user.Role.ToString()
-                );
+        // ✅ Generar el refresh token aquí
+        var refreshToken = await _unitOfWork.RefreshTokenService.GenerateRefreshTokenAsync(user.Id);
 
+        var userDetails = new AuthenticationUserDto(
+            Token: accessToken,
+            RefreshToken: refreshToken.Token,
+            Name: $"{user.Name} {user.LastName}",
+            ProfilePicture: user.ProfilePicture ?? "",
+            Role: user.Role.ToString()
+        );
 
         return new Response<AuthenticationUserDto>((int)MessageStatusCode.Success, userDetails);
-
     }
+
 }
