@@ -1,11 +1,8 @@
 ﻿using SyncUpC.Domain.Entities.Base;
 using SyncUpC.Domain.Ports;
 using SyncUpC.Domain.Ports.Configuration.JsonWebToken;
-using SyncUpC.Domain.Services;
 using System.Security.Cryptography;
 
-
-[ApplicationService]
 public class RefreshTokenService : IRefreshTokenService
 {
     private readonly IGenericRepository<RefreshToken> _refreshTokenRepository;
@@ -17,11 +14,25 @@ public class RefreshTokenService : IRefreshTokenService
 
     public async Task<RefreshToken> GenerateRefreshTokenAsync(string userId)
     {
-        var token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
+        var newToken = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
+
+        var existing = (await _refreshTokenRepository.FindAsync(rt => rt.UserId == userId)).FirstOrDefault();
+
+        if (existing != null)
+        {
+            existing.Token = newToken;
+            existing.CreatedAt = DateTime.UtcNow;
+            existing.ExpiresAt = DateTime.UtcNow.AddDays(7);
+            existing.RevokedAt = null;
+            existing.ReplacedByToken = null;
+
+            await _refreshTokenRepository.Update(existing);
+            return existing;
+        }
 
         var refreshToken = new RefreshToken
         {
-            Token = token,
+            Token = newToken,
             UserId = userId,
             CreatedAt = DateTime.UtcNow,
             ExpiresAt = DateTime.UtcNow.AddDays(7)
@@ -30,6 +41,9 @@ public class RefreshTokenService : IRefreshTokenService
         await _refreshTokenRepository.Add(refreshToken);
         return refreshToken;
     }
+
+
+
 
     public async Task<RefreshToken?> GetByTokenAsync(string token)
     {

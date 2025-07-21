@@ -9,6 +9,6 @@ public class RefreshToken : BaseEntity<string>
     public DateTime? RevokedAt { get; set; }
     public string? ReplacedByToken { get; set; }
     public bool IsExpired => DateTime.UtcNow >= ExpiresAt;
-    public bool IsActive => RevokedAt == null && !IsExpired;
+    public bool IsActive => RevokedAt == null && ExpiresAt > DateTime.UtcNow;
     public string UserId { get; set; } = null!; // Suponiendo que el ID de usuario es string
 }

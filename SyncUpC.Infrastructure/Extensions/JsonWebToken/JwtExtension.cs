@@ -86,7 +86,7 @@ public static class JwtExtension
             });
 
         services.AddTransient<IJwtService, JwtService>();
-
+        services.AddTransient<IRefreshTokenService, RefreshTokenService>();
         return services;
     }
 }

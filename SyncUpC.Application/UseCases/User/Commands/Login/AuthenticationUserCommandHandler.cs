@@ -29,8 +29,8 @@ public class AuthenticationUserCommandHandler : IRequestHandler<AuthenticationUs
             throw new BusinessException("Usuario no encontrado.", (int)MessageStatusCode.NotFound);
         }
 
-        // ✅ Generar el refresh token aquí
-        var refreshToken = await _unitOfWork.RefreshTokenService.GenerateRefreshTokenAsync(user.Id);
+        var refreshToken = await _unitOfWork.AccountService.RefreshToken(user.Id);
+
 
         var userDetails = new AuthenticationUserDto(
             Token: accessToken,

@@ -1,5 +1,6 @@
 ﻿using SyncUpC.Domain.Common.Enums;
 using SyncUpC.Domain.Common.Exceptions;
+using SyncUpC.Domain.Entities.Base;
 using SyncUpC.Domain.Entities.User;
 using SyncUpC.Domain.Ports;
 using SyncUpC.Domain.Ports.Configuration.JsonWebToken;
@@ -13,17 +14,21 @@ public class AccountService : IAccountService
 {
     private readonly IGenericRepository<User> _userRepository;
     private readonly IJwtService _jwtService;
+    private readonly IRefreshTokenService _refreshTokenService;
 
-    public AccountService(IGenericRepository<User> userRepository,
-                          IJwtService jwtService
-                        )
+    public AccountService(IGenericRepository<User> userRepository, IJwtService jwtService, IRefreshTokenService refreshTokenService)
     {
         _userRepository = userRepository;
         _jwtService = jwtService;
+        _refreshTokenService = refreshTokenService;
     }
 
-
-
+    public async Task<RefreshToken> RefreshToken(string userId)
+    {
+        // ✅ Generar el refresh token aquí
+        var refreshToken = await _refreshTokenService.GenerateRefreshTokenAsync(userId);
+        return refreshToken;
+    }
 
     public async Task<string> ValidateMobileApp(string email, string password)
     {
