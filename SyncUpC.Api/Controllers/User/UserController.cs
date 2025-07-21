@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SyncUpC.Application.UseCases.User.Students.Commands.CreateStudent;
-using SyncUpC.Application.UseCases.User.Students.Commands.Login;
-using SyncUpC.Application.UseCases.User.Students.Dtos;
+using SyncUpC.Application.UseCases.User.Commands.CreateStudent;
+using SyncUpC.Application.UseCases.User.Commands.Login;
+using SyncUpC.Application.UseCases.User.Dtos;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.WebApi.Common.Constants;
 

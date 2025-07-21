@@ -29,7 +29,6 @@ public class AcademicEvent : BaseEntity<string>
         RequiresRegistration = requiresRegistration;
         IsPublic = isPublic;
         Status = status;
-
         Tags = tags;
         Stats = stats;
         AdditionalDetails = additionalDetails;
@@ -59,8 +58,6 @@ public class AcademicEvent : BaseEntity<string>
     public bool RequiresRegistration { get; set; }
     public bool IsPublic { get; set; }
     public string Status { get; set; }
-    public string EntryQR { get; set; }
-    public string ExitQR { get; set; }
     public List<string> Tags { get; set; } = new();
     public EventStats Stats { get; set; }
     public string AdditionalDetails { get; set; } = null!; // speakers, agenda, etc.

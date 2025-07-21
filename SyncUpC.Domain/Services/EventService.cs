@@ -19,4 +19,16 @@ public class EventService : IEventService
         await _eventRepository.Add(academicEvent);
         return academicEvent;
     }
+
+    public async Task<List<AcademicEvent>> GetAllEvents()
+    {
+        var events = await _eventRepository.GetAll();
+        return events.ToList();
+    }
+
+    public async Task<AcademicEvent> GetEventById(string eventId)
+    {
+        var events = await _eventRepository.GetById(eventId);
+        return events;
+    }
 }

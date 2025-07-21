@@ -33,7 +33,7 @@ public class AccountService : IAccountService
         // Public Claims 
         claimsValue.Add(findUser.Id);
         claimsValue.Add(findUser.Email);
-        claimsValue.Add(findUser.Role);
+        claimsValue.Add(findUser.Role.ToString());
         claimsValue.Add("4076de2f-91cc-4e5c-9bb9-e252489ef313");
 
         var token = _jwtService.BuildToken(claimsValue);

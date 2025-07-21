@@ -1,4 +1,5 @@
-﻿using SyncUpC.Domain.Entities.User;
+﻿using SyncUpC.Domain.Entities.Events;
+using SyncUpC.Domain.Entities.User;
 using SyncUpC.Domain.Ports;
 using SyncUpC.Domain.Ports.Services;
 
@@ -10,12 +11,12 @@ namespace SyncUpC.Domain.Services;
 public class UserService : IUserService
 {
     private readonly IGenericRepository<User> _studentRepository;
+    private readonly IGenericRepository<AcademicEvent> _eventRepository;
 
-
-    public UserService(IGenericRepository<User> studentRepository)
+    public UserService(IGenericRepository<User> studentRepository, IGenericRepository<AcademicEvent> eventRepository)
     {
         _studentRepository = studentRepository;
-      
+        _eventRepository = eventRepository;
     }
 
     public async Task<User> CreateUserAsync(User user)
@@ -39,4 +40,12 @@ public class UserService : IUserService
 
         return user!;
     }
+
+    public async Task<User> UpdateUser(User user)
+    {
+        await _studentRepository.Update(user);
+        return user;
+    }
+
+
 }

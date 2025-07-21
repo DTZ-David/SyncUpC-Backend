@@ -11,4 +11,5 @@ public interface IUnitOfWork
     IEventService EventService { get; }
     IFacultyService FacultyService { get; }
     ICareerService CareerService { get; }
+    IForumService ForumService { get; }
 }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using SyncUpC.Domain.Common.Enums;
 using SyncUpC.Domain.Common.Exceptions;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using System.Text.Json;

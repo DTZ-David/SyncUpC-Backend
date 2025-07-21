@@ -1,17 +1,19 @@
 ﻿using SyncUpC.Domain.Entities.Base;
 
-namespace SyncUpC.Domain.Entities.User
+namespace SyncUpC.Domain.Entities.User;
+
+public class Faculty : BaseEntity<string>
 {
-    public class Faculty : BaseEntity<string>
+    public Faculty(string name, List<Career> careers)
     {
-        public Faculty(string name)
-        {
-
-            Name = name;
-        }
-
-
-        public string Name { get; set; }
+        Name = name;
+        Careers = careers;
+    }
+    public Faculty()
+    {
 
     }
+
+    public string Name { get; set; }
+    public List<Career> Careers { get; set; }
 }

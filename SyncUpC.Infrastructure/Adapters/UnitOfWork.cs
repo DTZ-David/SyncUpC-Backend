@@ -18,12 +18,15 @@ public class UnitOfWork : IUnitOfWork
 
     public ICareerService CareerService { get; }
 
+    public IForumService ForumService { get; }
+
     public UnitOfWork(IAccountService accountService,
                       IUserService studentService,
                       IClaimService claimsService,
                       IEventService eventService,
                       ICareerService careerService,
-                      IFacultyService facultyService)
+                      IFacultyService facultyService,
+                      IForumService forumService)
     {
         AccountService = accountService;
         UserService = studentService;
@@ -31,6 +34,7 @@ public class UnitOfWork : IUnitOfWork
         CareerService = careerService;
         FacultyService = facultyService;
         EventService = eventService;
+        ForumService = forumService;
     }
 
 }
