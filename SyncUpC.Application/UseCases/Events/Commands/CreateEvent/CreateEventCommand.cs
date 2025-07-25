@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.Events.Dtos;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
-using SyncUpC.Domain.Entities.Events;
 
 namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent;
 
@@ -17,9 +16,6 @@ public record CreateEventCommand(
     DateTime EndDate,
     DateTime RegistrationStart,
     DateTime RegistrationEnd,
-
-    List<EventCategory> CategoryId,
-    string FacultyId,
     List<string> CareerIds,
 
     bool TargetTeachers,

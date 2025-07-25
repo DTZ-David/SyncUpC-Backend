@@ -18,6 +18,7 @@ public class MapperProfile : Profile
         // Configuración manual para el record
         CreateMap<AcademicEvent, AcademicEventDto>()
             .ConstructUsing(src => new AcademicEventDto(
+                src.Id,
                 src.EventTitle,
                 src.EventObjective,
                 src.StartDate,
@@ -28,7 +29,9 @@ public class MapperProfile : Profile
                 src.TargetGeneral,
                 src.AdditionalDetails,
                 src.ImageUrls,
-                src.ParticipantProfilePictures
+                src.ParticipantProfilePictures,
+                src.Tags,
+                false
             ));
 
 

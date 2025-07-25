@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.Events.Commands.CreateEvent;
 using SyncUpC.Application.UseCases.Events.Dtos;
 using SyncUpC.Application.UseCases.Events.Queries.GetAllEvents;
+using SyncUpC.Application.UseCases.Events.Queries.GetEventsForU;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.WebApi.Common.Constants;
 
@@ -35,5 +36,13 @@ public class EventController : BaseController
     public async Task<ActionResult<Response<IEnumerable<AcademicEventDto>>>> GetAllEvents()
     {
         return await Mediator.Send(new GetAllEventsQuery());
+    }
+
+    [Authorize]
+    [HttpGet]
+    [Route("GetAllEventsForStudents")]
+    public async Task<ActionResult<Response<IEnumerable<AcademicEventDto>>>> GetAllEventsForStudents()
+    {
+        return await Mediator.Send(new GetEventsForUStudentQuery());
     }
 }

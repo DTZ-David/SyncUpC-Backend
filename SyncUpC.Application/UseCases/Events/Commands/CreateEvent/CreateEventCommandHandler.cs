@@ -33,10 +33,6 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 $"{user.Name} {user.LastName}"
             );
 
-
-
-            var facultad = await _unitOfWork.FacultyService.GetFacultyById(request.FacultyId);
-
             var careers = new List<Domain.Entities.User.Career>();
 
             foreach (var id in request.CareerIds)
@@ -55,8 +51,6 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 request.EndDate,
                 request.RegistrationStart,
                 request.RegistrationEnd,
-                request.CategoryId,
-                facultad,
                 careers,
                 request.EventLocation,
                 request.TargetTeachers,

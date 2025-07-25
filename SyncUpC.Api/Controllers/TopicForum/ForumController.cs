@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.ForumUseCases.Commands.AddComment;
 using SyncUpC.Application.UseCases.ForumUseCases.Commands.AddTopic;
+using SyncUpC.Application.UseCases.ForumUseCases.Queries.GetAllCommentsForTopic;
 using SyncUpC.Application.UseCases.ForumUseCases.Queries.GetAllTopicsForEvent;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.Domain.Entities.Forum;
@@ -26,7 +27,7 @@ public class ForumController : BaseController
     }
 
     [HttpPost]
-    [Route("GetAllTopics")]
+    [Route("GetAllTopicsForEvent")]
     [Authorize]
     public async Task<ActionResult<Response<IEnumerable<Forum>>>> GetAllTopics([FromBody] GetAllTopicsForEventQuery command)
     {
@@ -40,5 +41,16 @@ public class ForumController : BaseController
     {
         return await Mediator.Send(command);
     }
+
+
+    [HttpPost]
+    [Route("GetAllComments")]
+    [Authorize]
+    public async Task<ActionResult<Response<IEnumerable<Comment>>>> GetAllCommentsForTopic([FromBody] GetAllCommentsForTopicQuery command)
+    {
+        return await Mediator.Send(command);
+    }
+
+
 
 }

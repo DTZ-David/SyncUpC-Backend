@@ -5,7 +5,7 @@ namespace SyncUpC.Domain.Entities.Events;
 
 public class AcademicEvent : BaseEntity<string>
 {
-    public AcademicEvent(Organizer organizer, string eventTitle, string eventObjective, DateTime startDate, DateTime endDate, DateTime registrationStart, DateTime registrationEnd, List<EventCategory> category, Faculty? faculty, List<Career> careers, string eventLocation, bool targetTeachers, bool targetStudents, bool targetAdministrative, bool targetGeneral, string address, bool isVirtual, string? meetingUrl, int maxCapacity, bool requiresRegistration, bool isPublic, string status, List<string> tags, EventStats stats, string additionalDetails, List<string> imageUrls, List<string> participantProfilePictures)
+    public AcademicEvent(Organizer organizer, string eventTitle, string eventObjective, DateTime startDate, DateTime endDate, DateTime registrationStart, DateTime registrationEnd, List<Career> careers, string eventLocation, bool targetTeachers, bool targetStudents, bool targetAdministrative, bool targetGeneral, string address, bool isVirtual, string? meetingUrl, int maxCapacity, bool requiresRegistration, bool isPublic, string status, List<string> tags, EventStats stats, string additionalDetails, List<string> imageUrls, List<string> participantProfilePictures)
     {
         Organizer = organizer;
         EventTitle = eventTitle;
@@ -14,8 +14,6 @@ public class AcademicEvent : BaseEntity<string>
         EndDate = endDate;
         RegistrationStart = registrationStart;
         RegistrationEnd = registrationEnd;
-        Category = category;
-        Faculty = faculty;
         Careers = careers;
         EventLocation = eventLocation;
         TargetTeachers = targetTeachers;
@@ -43,7 +41,6 @@ public class AcademicEvent : BaseEntity<string>
     public DateTime EndDate { get; set; }
     public DateTime RegistrationStart { get; set; }
     public DateTime RegistrationEnd { get; set; }
-    public List<EventCategory> Category { get; set; }
     public Faculty? Faculty { get; set; }
     public List<Career> Careers { get; set; } = new();
     public string EventLocation { get; set; }

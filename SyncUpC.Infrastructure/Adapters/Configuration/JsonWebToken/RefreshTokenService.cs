@@ -22,7 +22,7 @@ public class RefreshTokenService : IRefreshTokenService
         {
             existing.Token = newToken;
             existing.CreatedAt = DateTime.UtcNow;
-            existing.ExpiresAt = DateTime.UtcNow.AddDays(7);
+            existing.ExpiresAt = DateTime.UtcNow.AddDays(30);
             existing.RevokedAt = null;
             existing.ReplacedByToken = null;
 

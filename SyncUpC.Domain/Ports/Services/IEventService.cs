@@ -10,5 +10,8 @@ public interface IEventService
     Task<List<AcademicEvent>> GetAllEvents();
 
     Task<AcademicEvent> GetEventById(string eventId);
+    Task<List<AcademicEvent>> GetSavedEvents(List<string> eventIds);
+    Task<List<AcademicEvent>> GetEventsForU(string careerId);
+
 
 }

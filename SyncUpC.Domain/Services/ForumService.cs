@@ -33,6 +33,12 @@ public class ForumService : IForumService
         return forum;
     }
 
+    public async Task<List<Comment>> GetAllCommentForTopic(string forumId)
+    {
+        var forun = await _forumRepository.GetById(forumId);
+        return forun.Comments;
+    }
+
     public async Task<Forum> GetForum(string forumId)
     {
         var forun = await _forumRepository.GetById(forumId);
