@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using SyncUpC.Application.UseCases.ForumUseCases.Dtos;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
-using SyncUpC.Domain.Entities.Forum;
 
 namespace SyncUpC.Application.UseCases.ForumUseCases.Commands.AddTopic
 {
@@ -10,6 +10,6 @@ namespace SyncUpC.Application.UseCases.ForumUseCases.Commands.AddTopic
         string eventId,
         string title,
         string content
-        ) : IRequest<ActionResult<Response<Forum>>>;
+        ) : IRequest<ActionResult<Response<ForumDto>>>;
 
 }

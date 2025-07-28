@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="UseCases\Bookmarks\Dtos\" />
-    <Folder Include="UseCases\ForumUseCases\Dtos\" />
     <Folder Include="UseCases\User\Queries\" />
   </ItemGroup>
 
