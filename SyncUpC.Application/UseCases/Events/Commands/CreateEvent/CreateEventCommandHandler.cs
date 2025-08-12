@@ -71,7 +71,23 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 new List<string>() // sin participantes al crear
             );
 
+
             await _unitOfWork.EventService.CreateEventAsync(newEvent);
+
+            if (request.RequiresRegistration)
+            {
+                var qrImageBytes = _unitOfWork.QRService.GenerateQrImageAsBytes(newEvent.Id);
+                var subject = "Código QR de asistencia al evento";
+                var body = $"Hola {user.Name},\n\nAdjunto encontrarás el código QR para tu evento \"{newEvent.EventTitle}\".";
+
+                await _unitOfWork.EmailService.SendEmailWithAttachmentAsync(
+                    to: user.Email,
+                    subject: subject,
+                    body: body,
+                    attachmentBytes: qrImageBytes,
+                    attachmentName: "qr_evento.png"
+                );
+            }
 
             var resultDto = _mapper.Map<AcademicEventDto>(newEvent);
 
