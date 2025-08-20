@@ -20,6 +20,13 @@ public class EventService : IEventService
         return academicEvent;
     }
 
+    public async Task<AcademicEvent> DeleteEvent(string id)
+    {
+        var academicEvent = await _eventRepository.GetById(id);
+        await _eventRepository.Delete(academicEvent);
+        return academicEvent;
+    }
+
     public async Task<List<AcademicEvent>> GetAllEvents()
     {
         var events = await _eventRepository.GetAll();
@@ -46,4 +53,9 @@ public class EventService : IEventService
         return events.ToList();
     }
 
+    public async Task<AcademicEvent> UpdateEvent(AcademicEvent academicEvent)
+    {
+        await _eventRepository.Update(academicEvent);
+        return academicEvent;
+    }
 }

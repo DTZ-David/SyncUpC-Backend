@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SyncUpC.Infraestructure.Extensions;
 using SyncUpC.Infraestructure.Extensions.Claims;
+using SyncUpC.Infraestructure.Extensions.Cors;
 using SyncUpC.Infraestructure.Extensions.Feature;
 using SyncUpC.Infraestructure.Extensions.JsonWebToken;
 using SyncUpC.Infraestructure.Extensions.Mapper;
@@ -31,7 +32,8 @@ public static class Startup
             .AddPersistence(configuration)
             .AddClaims()
             .AddAuthorization()
-            .AddCustomMiddleware();
+            .AddCustomMiddleware()
+            .AddCorsPolicy(); // 👈 aquí
 
     }
 
@@ -48,6 +50,8 @@ public static class Startup
         // 2. Swagger (si está en dev)
         builder.UseSwagger(environment);
 
+        // 🔹 Aquí va CORS, antes de auth
+        builder.UseCors("AllowFrontend");
         // 3. Autenticación y autorización
         builder.UseAuthentication();
         builder.UseAuthorization();

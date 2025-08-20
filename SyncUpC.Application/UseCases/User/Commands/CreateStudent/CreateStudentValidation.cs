@@ -47,10 +47,6 @@ public class CreateStudentValidation : AbstractValidator<CreateStudentCommand>
             .Must(ObjectIdValidation.IsValidObjectId)
             .WithMessage("La carrera no es válida");
 
-
-
-        // Si tienes notificaciones, podrías validar con otro validador personalizado aquí
-        // RuleFor(s => s.NotificationPreferences).SetValidator(new NotificationPreferencesValidator());
     }
 
     private async Task<bool> BeUniqueEmailAsync(string email, CancellationToken cancellationToken)

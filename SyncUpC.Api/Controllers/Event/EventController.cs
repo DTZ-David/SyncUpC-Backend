@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.Events.Commands.CreateEvent;
+using SyncUpC.Application.UseCases.Events.Commands.DeleteEvent;
+using SyncUpC.Application.UseCases.Events.Commands.UpdateEvent;
 using SyncUpC.Application.UseCases.Events.Dtos;
 using SyncUpC.Application.UseCases.Events.Queries.GetAllEvents;
 using SyncUpC.Application.UseCases.Events.Queries.GetEventsForU;
@@ -26,6 +28,21 @@ public class EventController : BaseController
     [HttpPost]
     [Route("CreateEvent")]
     public async Task<ActionResult<Response<AcademicEventDto>>> CreateUser([FromBody] CreateEventCommand command)
+    {
+        return await Mediator.Send(command);
+    }
+
+    [Authorize]
+    [HttpPost]
+    [Route("UpdateEvent")]
+    public async Task<ActionResult<Response<AcademicEventDto>>> UpdateEvent([FromBody] UpdateEventCommand command)
+    {
+        return await Mediator.Send(command);
+    }
+    [Authorize]
+    [HttpDelete]
+    [Route("DeleteEvent")]
+    public async Task<ActionResult<Response<AcademicEventDto>>> DeleteEvent([FromBody] DeleteEventCommand command)
     {
         return await Mediator.Send(command);
     }

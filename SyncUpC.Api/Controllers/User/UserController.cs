@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SyncUpC.Application.UseCases.User.Commands.CreateStaffMember;
 using SyncUpC.Application.UseCases.User.Commands.CreateStudent;
 using SyncUpC.Application.UseCases.User.Commands.Login;
 using SyncUpC.Application.UseCases.User.Commands.RefreshToken;
@@ -20,7 +21,6 @@ public class UserController : BaseController
     /// <summary>
     /// Register a student user.
     /// </summary>
-    /// <param name="language">The language for the response (e.g., "en", "es").</param>
     /// <response code="200">Successful query.</response>
     /// <response code="404">Query error, client's headquarters not found.</response>
     [HttpPost("registerStudent")]
@@ -28,6 +28,18 @@ public class UserController : BaseController
     {
         return await Mediator.Send(command);
     }
+
+    /// <summary>
+    /// Register a staff member user.
+    /// </summary>
+    /// <response code="200">Successful query.</response>
+    /// <response code="404">Query error, client's headquarters not found.</response>
+    [HttpPost("registerStaffMember")]
+    public async Task<ActionResult<Response<StaffMemberDto>>> CreateStaffMember([FromBody] CreateStaffMemberCommand command)
+    {
+        return await Mediator.Send(command);
+    }
+
 
     /// <summary>
     /// Authenticate user in mobile apps
