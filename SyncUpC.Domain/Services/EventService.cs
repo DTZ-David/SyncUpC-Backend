@@ -47,6 +47,15 @@ public class EventService : IEventService
         return events.ToList();
     }
 
+    public async Task<List<AcademicEvent>> GetEventsMadeForU(string userId)
+    {
+        var events = await _eventRepository.FindAsync(e =>
+            e.Organizer.Id == userId);
+
+        return events.ToList();
+    }
+
+
     public async Task<List<AcademicEvent>> GetSavedEvents(List<string> eventIds)
     {
         var events = await _eventRepository.FindAsync(e => eventIds.Contains(e.Id));

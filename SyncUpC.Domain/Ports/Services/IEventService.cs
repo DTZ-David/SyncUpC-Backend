@@ -12,5 +12,6 @@ public interface IEventService
     Task<List<AcademicEvent>> GetSavedEvents(List<string> eventIds);
     Task<List<AcademicEvent>> GetEventsForU(string careerId);
     Task<AcademicEvent> DeleteEvent(string id);
+    Task<List<AcademicEvent>> GetEventsMadeForU(string userId);
 
 }

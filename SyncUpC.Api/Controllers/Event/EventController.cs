@@ -5,6 +5,7 @@ using SyncUpC.Application.UseCases.Events.Commands.DeleteEvent;
 using SyncUpC.Application.UseCases.Events.Commands.UpdateEvent;
 using SyncUpC.Application.UseCases.Events.Dtos;
 using SyncUpC.Application.UseCases.Events.Queries.GetAllEvents;
+using SyncUpC.Application.UseCases.Events.Queries.GetAllEventsForStaffMember;
 using SyncUpC.Application.UseCases.Events.Queries.GetEventsForU;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.WebApi.Common.Constants;
@@ -61,5 +62,13 @@ public class EventController : BaseController
     public async Task<ActionResult<Response<IEnumerable<AcademicEventDto>>>> GetAllEventsForStudents()
     {
         return await Mediator.Send(new GetEventsForUStudentQuery());
+    }
+
+    [Authorize]
+    [HttpGet]
+    [Route("GetAllEventsMadeForU")]
+    public async Task<ActionResult<Response<IEnumerable<AcademicEventDto>>>> GetAllEventsMadeForU()
+    {
+        return await Mediator.Send(new GetAllEventsForStaffMemberQuery());
     }
 }
