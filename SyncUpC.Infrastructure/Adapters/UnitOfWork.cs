@@ -6,6 +6,25 @@ namespace SyncUpC.Infraestructure.Adapters;
 
 public class UnitOfWork : IUnitOfWork
 {
+    public UnitOfWork(IAccountService accountService, IClaimService claimsService, IEventService eventService, IUserService userService, IQRService qRService, IEmailService emailService, IFacultyService facultyService, ICareerService careerService, IAttendanceService attendanceService, IForumService forumService, ISpaceService spaceService, ICampusService campusService, IEventCategoryService eventCategoryService, IEventTypeService eventTypeService, IRegistrationService registrationService)
+    {
+        AccountService = accountService;
+        ClaimsService = claimsService;
+        EventService = eventService;
+        UserService = userService;
+        QRService = qRService;
+        EmailService = emailService;
+        FacultyService = facultyService;
+        CareerService = careerService;
+        AttendanceService = attendanceService;
+        ForumService = forumService;
+        SpaceService = spaceService;
+        CampusService = campusService;
+        EventCategoryService = eventCategoryService;
+        EventTypeService = eventTypeService;
+        RegistrationService = registrationService;
+    }
+
     public IAccountService AccountService { get; }
     public IClaimService ClaimsService { get; }
     public IEventService EventService { get; }
@@ -16,28 +35,10 @@ public class UnitOfWork : IUnitOfWork
     public ICareerService CareerService { get; }
     public IAttendanceService AttendanceService { get; }
     public IForumService ForumService { get; }
-
-    public UnitOfWork(IAccountService accountService,
-                      IUserService studentService,
-                      IClaimService claimsService,
-                      IEventService eventService,
-                      ICareerService careerService,
-                      IFacultyService facultyService,
-                      IForumService forumService,
-                      IQRService qRService,
-                      IEmailService emailService,
-                      IAttendanceService attendance)
-    {
-        AccountService = accountService;
-        UserService = studentService;
-        ClaimsService = claimsService;
-        CareerService = careerService;
-        FacultyService = facultyService;
-        AttendanceService = attendance;
-        EventService = eventService;
-        ForumService = forumService;
-        QRService = qRService;
-        EmailService = emailService;
-    }
+    public IRegistrationService RegistrationService { get; }
+    public ISpaceService SpaceService { get; }
+    public ICampusService CampusService { get; }
+    public IEventCategoryService EventCategoryService { get; }
+    public IEventTypeService EventTypeService { get; }
 
 }

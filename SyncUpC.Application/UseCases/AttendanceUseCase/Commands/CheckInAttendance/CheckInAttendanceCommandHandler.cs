@@ -31,8 +31,7 @@ public class CheckInAttendanceCommandHandler : IRequestHandler<CheckInAttendance
         // Crear el objeto UserAttendance
         var userAttendance = new UserAttendance(
             userId: user.Id,
-            checkInTime: DateTime.Now.ToString(),
-            checkOutTime: ""
+            checkInTime: DateTime.Now.ToString()
         );
 
         // Registrar asistencia (crear o actualizar)

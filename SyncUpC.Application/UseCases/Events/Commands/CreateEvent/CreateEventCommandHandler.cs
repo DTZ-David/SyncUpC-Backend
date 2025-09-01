@@ -33,12 +33,33 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 $"{user.Name} {user.LastName}"
             );
 
+            // Carreras
             var careers = new List<Domain.Entities.User.Career>();
-
             foreach (var id in request.CareerIds)
             {
                 var career = await _unitOfWork.CareerService.GetCareerById(id);
                 careers.Add(career);
+            }
+
+            var campus = await _unitOfWork.CampusService.GetCampusById(request.CampusId);
+
+            var space = await _unitOfWork.SpaceService.GetSpaceById(request.SpaceId);
+
+
+            // Categorías
+            var categories = new List<EventCategory>();
+            foreach (var id in request.EventCategoryId)
+            {
+                var category = await _unitOfWork.EventCategoryService.GetCategoryById(id);
+                categories.Add(category);
+            }
+
+            // Tipos de evento
+            var eventTypes = new List<EventType>();
+            foreach (var id in request.EventTypesId)
+            {
+                var type = await _unitOfWork.EventTypeService.GetEventType(id);
+                eventTypes.Add(type);
             }
 
             var eventStats = new EventStats(0, 0, 0);
@@ -49,28 +70,27 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 request.EventObjective,
                 request.StartDate,
                 request.EndDate,
-                request.RegistrationStart,
-                request.RegistrationEnd,
+                campus,
+                space,
                 careers,
-                request.EventLocation,
                 request.TargetTeachers,
                 request.TargetStudents,
                 request.TargetAdministrative,
                 request.TargetGeneral,
-                request.Address,
                 request.IsVirtual,
                 request.MeetingUrl,
                 request.MaxCapacity,
                 request.RequiresRegistration,
                 request.IsPublic,
-                "draft", // o inicializado con un enum si lo deseas
-                request.Tags,
-                eventStats,
-                request.AdditionalDetails!,
-                request.ImageUrls!,
+                "created",
+                categories,
+                eventTypes,
+                request.AdditionalDetails ?? string.Empty,
+                request.ImageUrls ?? new List<string>(),
                 new List<string>() // sin participantes al crear
-            );
 
+
+            );
 
             await _unitOfWork.EventService.CreateEventAsync(newEvent);
 
@@ -89,10 +109,30 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 );
             }
 
-            var resultDto = _mapper.Map<AcademicEventDto>(newEvent);
+            var resultDto = new AcademicEventDto(
+                newEvent.Id,
+                newEvent.EventTitle,
+                newEvent.EventObjective,
+                newEvent.StartDate,
+                newEvent.EndDate,
+                new CampusDto(campus.Name),
+                new SpaceDto(space.Name),
+                newEvent.TargetTeachers,
+                newEvent.TargetStudents,
+                newEvent.TargetAdministrative,
+                newEvent.TargetGeneral,
+                newEvent.AdditionalDetails,
+                newEvent.ImageUrls ?? new List<string>(),
+                newEvent.ParticipantProfilePictures ?? new List<string>(),
+                categories.Select(c => new EventCategoryDto(c.Name)).ToList(),
+                eventTypes.Select(et => new EventTypeDto(et.Name)).ToList(),
+                false,
+                newEvent.Status
+            );
 
             return new CreatedResult(string.Empty, new Response<AcademicEventDto>((int)MessageStatusCode.Create, resultDto));
         }
+
     }
 
 }

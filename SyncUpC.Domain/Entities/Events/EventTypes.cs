@@ -1,0 +1,17 @@
+﻿using SyncUpC.Domain.Entities.Base;
+
+namespace SyncUpC.Domain.Entities.Events
+{
+    public class EventType : BaseEntity<string>
+    {
+        public EventType(string name, string description)
+        {
+            Name = name;
+            Description = description;
+        }
+
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+    }
+}

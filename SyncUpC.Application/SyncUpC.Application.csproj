@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\AttendanceUseCase\Queries\" />
     <Folder Include="UseCases\Bookmarks\Dtos\" />
     <Folder Include="UseCases\User\Queries\" />
   </ItemGroup>

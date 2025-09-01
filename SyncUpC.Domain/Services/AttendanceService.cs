@@ -16,6 +16,13 @@ public class AttendanceService : IAttendanceService
         _attendanceRepository = attendanceRepository;
     }
 
+    public async Task<Attendance?> GetAttendance(string eventId)
+    {
+        var attendances = await _attendanceRepository.FindAsync(x => x.EventId == eventId);
+        return attendances.FirstOrDefault();
+    }
+
+
     public async Task<Attendance> SubmitAnAttendance(UserAttendance newUserAttendance, string eventId)
     {
         // Buscar si ya existe un Attendance para ese evento
@@ -44,7 +51,7 @@ public class AttendanceService : IAttendanceService
             {
                 // Actualizar los campos necesarios
                 existingUserAttendance.CheckInTime = newUserAttendance.CheckInTime;
-                existingUserAttendance.CheckOutTime = newUserAttendance.CheckOutTime;
+
             }
             else
             {

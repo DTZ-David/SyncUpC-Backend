@@ -5,30 +5,51 @@ namespace SyncUpC.Domain.Entities.Events;
 
 public class AcademicEvent : BaseEntity<string>
 {
-    public AcademicEvent(Organizer organizer, string eventTitle, string eventObjective, DateTime startDate, DateTime endDate, DateTime registrationStart, DateTime registrationEnd, List<Career> careers, string eventLocation, bool targetTeachers, bool targetStudents, bool targetAdministrative, bool targetGeneral, string address, bool isVirtual, string? meetingUrl, int maxCapacity, bool requiresRegistration, bool isPublic, string status, List<string> tags, EventStats stats, string additionalDetails, List<string> imageUrls, List<string> participantProfilePictures)
+    public AcademicEvent(
+        Organizer organizer,
+        string eventTitle,
+        string eventObjective,
+        DateTime startDate,
+        DateTime endDate,
+        Campus campus,
+        Space space,
+        List<Career> careers,
+        bool targetTeachers,
+        bool targetStudents,
+        bool targetAdministrative,
+        bool targetGeneral,
+        bool isVirtual,
+        string? meetingUrl,
+        int maxCapacity,
+        bool requiresRegistration,
+        bool isPublic,
+        string status,
+        List<EventCategory> categories,
+        List<EventType> eventTypes,
+        string additionalDetails,
+        List<string> imageUrls,
+        List<string> participantProfilePictures)
     {
         Organizer = organizer;
         EventTitle = eventTitle;
         EventObjective = eventObjective;
         StartDate = startDate;
         EndDate = endDate;
-        RegistrationStart = registrationStart;
-        RegistrationEnd = registrationEnd;
+        Campus = campus;
+        Space = space;
         Careers = careers;
-        EventLocation = eventLocation;
         TargetTeachers = targetTeachers;
         TargetStudents = targetStudents;
         TargetAdministrative = targetAdministrative;
         TargetGeneral = targetGeneral;
-        Address = address;
         IsVirtual = isVirtual;
         MeetingUrl = meetingUrl;
         MaxCapacity = maxCapacity;
         RequiresRegistration = requiresRegistration;
         IsPublic = isPublic;
         Status = status;
-        Tags = tags;
-        Stats = stats;
+        Categories = categories;
+        EventTypes = eventTypes;
         AdditionalDetails = additionalDetails;
         ImageUrls = imageUrls;
         ParticipantProfilePictures = participantProfilePictures;
@@ -39,26 +60,35 @@ public class AcademicEvent : BaseEntity<string>
     public string EventObjective { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public DateTime RegistrationStart { get; set; }
-    public DateTime RegistrationEnd { get; set; }
-    public Faculty? Faculty { get; set; }
+
+    // Ubicación
+    public Campus Campus { get; set; }
+    public Space Space { get; set; }
+
+    // Públicos objetivos
     public List<Career> Careers { get; set; } = new();
-    public string EventLocation { get; set; }
     public bool TargetTeachers { get; set; }
     public bool TargetStudents { get; set; }
     public bool TargetAdministrative { get; set; }
     public bool TargetGeneral { get; set; }
-    public string Address { get; set; }
+
+    // Modalidad
     public bool IsVirtual { get; set; }
     public string? MeetingUrl { get; set; }
+
+    // Configuración
     public int MaxCapacity { get; set; }
     public bool RequiresRegistration { get; set; }
     public bool IsPublic { get; set; }
     public string Status { get; set; }
-    public List<string> Tags { get; set; } = new();
-    public EventStats Stats { get; set; }
-    public string AdditionalDetails { get; set; } = null!; // speakers, agenda, etc.
-    public List<string> ImageUrls { get; set; } = new(); // JPG/PNG advertising materials
+
+    // Clasificación
+    public List<EventCategory> Categories { get; set; } = new();
+    public List<EventType> EventTypes { get; set; } = new();
+
+    // Extras
+    public string? AdditionalDetails { get; set; }
+    public List<string> ImageUrls { get; set; } = new();
     public List<string> ParticipantProfilePictures { get; set; } = new();
 
 }

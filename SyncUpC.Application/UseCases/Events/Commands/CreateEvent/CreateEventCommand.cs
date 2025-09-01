@@ -9,13 +9,11 @@ public record CreateEventCommand(
     // Info básica
     string EventTitle,
     string EventObjective,
-    string EventLocation,
-    string Address,
+    string CampusId,
+    string SpaceId,
 
     DateTime StartDate,
     DateTime EndDate,
-    DateTime RegistrationStart,
-    DateTime RegistrationEnd,
     List<string> CareerIds,
 
     bool TargetTeachers,
@@ -28,7 +26,9 @@ public record CreateEventCommand(
     int MaxCapacity,
     bool RequiresRegistration,
     bool IsPublic,
-    List<string> Tags,
+    List<string> EventTypesId,
+    List<string> EventCategoryId,
     List<string>? ImageUrls,
     string? AdditionalDetails
 ) : IRequest<ActionResult<Response<AcademicEventDto>>>;
+

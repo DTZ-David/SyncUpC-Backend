@@ -5,6 +5,7 @@ using SyncUpC.Application.UseCases.ForumUseCases.Commands.AddTopic;
 using SyncUpC.Application.UseCases.ForumUseCases.Dtos;
 using SyncUpC.Application.UseCases.ForumUseCases.Queries.GetAllCommentsForTopic;
 using SyncUpC.Application.UseCases.ForumUseCases.Queries.GetAllTopicsForEvent;
+using SyncUpC.Application.UseCases.ForumUseCases.Queries.GetForumById;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.WebApi.Common.Constants;
 
@@ -47,6 +48,14 @@ public class ForumController : BaseController
     [Route("GetAllComments")]
     [Authorize]
     public async Task<ActionResult<Response<IEnumerable<CommentDto>>>> GetAllCommentsForTopic([FromBody] GetAllCommentsForTopicQuery command)
+    {
+        return await Mediator.Send(command);
+    }
+
+    [HttpPost]
+    [Route("GetForumById")]
+
+    public async Task<ActionResult<Response<ForumDto>>> GetForumById([FromBody] GetForumByIdQuery command)
     {
         return await Mediator.Send(command);
     }

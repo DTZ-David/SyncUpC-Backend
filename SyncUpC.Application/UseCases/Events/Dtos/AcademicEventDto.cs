@@ -1,25 +1,54 @@
 ﻿namespace SyncUpC.Application.UseCases.Events.Dtos;
+// ================== SubDtos ==================
+public record CampusDto(
+    string Name
+);
+
+public record SpaceDto(
+
+    string Name
+
+);
+
+public record EventCategoryDto(
+    string Name
+);
+
+public record EventTypeDto(
+
+    string Name
+
+);
+
+// ================== Evento principal ==================
 public record AcademicEventDto
 (
     string Id,
     // Event info
     string EventTitle,
     string EventObjective,
-    DateTime EventDate,
-    string EventLocation,
+    DateTime EventStartDate,
+    DateTime EventEndDate,
 
-    // Target audience
+    // Ubicación
+    CampusDto Campus,
+    SpaceDto Space,
+
+    // Públicos objetivos
     bool TargetTeachers,
     bool TargetStudents,
     bool TargetAdministrative,
     bool TargetGeneral,
 
-    // Optional additional data
+    // Extras
     string? AdditionalDetails,
     List<string>? ImageUrls,
-
-    // ✅ Solo URLs de fotos de perfil de los asistentes
     List<string>? ParticipantProfilePictures,
-    List<string>? Tags,
-    bool isSaved
+
+    // Clasificación
+    List<EventCategoryDto> Categories,
+    List<EventTypeDto> EventTypes,
+
+    bool? IsSaved,
+    string Status
 );

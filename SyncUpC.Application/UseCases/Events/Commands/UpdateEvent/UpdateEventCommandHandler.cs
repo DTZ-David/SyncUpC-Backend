@@ -5,6 +5,7 @@ using SyncUpC.Application.UseCases.Events.Dtos;
 using SyncUpC.Domain.Common.Enums;
 using SyncUpC.Domain.Common.Exceptions;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
+using SyncUpC.Domain.Entities.Events;
 using SyncUpC.Domain.Ports;
 
 namespace SyncUpC.Application.UseCases.Events.Commands.UpdateEvent
@@ -26,6 +27,12 @@ namespace SyncUpC.Application.UseCases.Events.Commands.UpdateEvent
             var user = await _unitOfWork.UserService.GetUserById(userClaim.UserId)
                 ?? throw new BusinessException("ERROR DE AUTENTICIDAD", (int)MessageStatusCode.NotFound);
 
+            // Buscar evento existente
+            var academicEvent = await _unitOfWork.EventService.GetEventById(request.EventId);
+            if (academicEvent == null)
+                throw new BusinessException("El evento no existe", (int)MessageStatusCode.NotFound);
+
+            // Carreras
             var careers = new List<Domain.Entities.User.Career>();
             foreach (var id in request.CareerIds)
             {
@@ -33,20 +40,36 @@ namespace SyncUpC.Application.UseCases.Events.Commands.UpdateEvent
                 if (career != null) careers.Add(career);
             }
 
-            // Buscar el evento
-            var academicEvent = await _unitOfWork.EventService.GetEventById(request.EventId);
-            if (academicEvent == null)
-                throw new BusinessException("El evento no existe", (int)MessageStatusCode.NotFound);
+            // Campus y espacio
+            var campus = await _unitOfWork.CampusService.GetCampusById(request.CampusId)
+                ?? throw new BusinessException("Campus no encontrado", (int)MessageStatusCode.NotFound);
+
+            var space = await _unitOfWork.SpaceService.GetSpaceById(request.SpaceId)
+                ?? throw new BusinessException("Espacio no encontrado", (int)MessageStatusCode.NotFound);
+
+            // Categorías
+            var categories = new List<EventCategory>();
+            foreach (var id in request.EventCategoryId)
+            {
+                var category = await _unitOfWork.EventCategoryService.GetCategoryById(id);
+                if (category != null) categories.Add(category);
+            }
+
+            // Tipos de evento
+            var eventTypes = new List<EventType>();
+            foreach (var id in request.EventTypesId)
+            {
+                var type = await _unitOfWork.EventTypeService.GetEventType(id);
+                if (type != null) eventTypes.Add(type);
+            }
 
             // Actualizar propiedades
             academicEvent.EventTitle = request.EventTitle;
             academicEvent.EventObjective = request.EventObjective;
-            academicEvent.EventLocation = request.EventLocation;
-            academicEvent.Address = request.Address;
             academicEvent.StartDate = request.StartDate;
             academicEvent.EndDate = request.EndDate;
-            academicEvent.RegistrationStart = request.RegistrationStart;
-            academicEvent.RegistrationEnd = request.RegistrationEnd;
+            academicEvent.Campus = campus;
+            academicEvent.Space = space;
             academicEvent.Careers = careers;
             academicEvent.TargetTeachers = request.TargetTeachers;
             academicEvent.TargetStudents = request.TargetStudents;
@@ -57,17 +80,36 @@ namespace SyncUpC.Application.UseCases.Events.Commands.UpdateEvent
             academicEvent.MaxCapacity = request.MaxCapacity;
             academicEvent.RequiresRegistration = request.RequiresRegistration;
             academicEvent.IsPublic = request.IsPublic;
-            academicEvent.Tags = request.Tags;
+            academicEvent.Categories = categories;
+            academicEvent.EventTypes = eventTypes;
             academicEvent.ImageUrls = request.ImageUrls ?? new List<string>();
-            academicEvent.AdditionalDetails = request.AdditionalDetails!;
+            academicEvent.AdditionalDetails = request.AdditionalDetails ?? string.Empty;
 
             // Guardar cambios
             await _unitOfWork.EventService.UpdateEvent(academicEvent);
 
+            var resultDto = new AcademicEventDto(
+                academicEvent.Id,
+                academicEvent.EventTitle,
+                academicEvent.EventObjective,
+                academicEvent.StartDate,
+                academicEvent.EndDate,
+                new CampusDto(campus.Name),
+                new SpaceDto(space.Name),
+                academicEvent.TargetTeachers,
+                academicEvent.TargetStudents,
+                academicEvent.TargetAdministrative,
+                academicEvent.TargetGeneral,
+                academicEvent.AdditionalDetails,
+                academicEvent.ImageUrls ?? new List<string>(),
+                academicEvent.ParticipantProfilePictures ?? new List<string>(),
+                categories.Select(c => new EventCategoryDto(c.Name)).ToList(),
+                eventTypes.Select(et => new EventTypeDto(et.Name)).ToList(),
+                false,
+                academicEvent.Status
+            );
 
-            var resultDto = _mapper.Map<AcademicEventDto>(academicEvent);
-
-            return new CreatedResult(string.Empty, new Response<AcademicEventDto>((int)MessageStatusCode.Create, resultDto));
+            return new OkObjectResult(new Response<AcademicEventDto>((int)MessageStatusCode.Success, resultDto));
         }
     }
 }

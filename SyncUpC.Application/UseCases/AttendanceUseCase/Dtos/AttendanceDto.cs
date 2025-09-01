@@ -4,3 +4,4 @@ public record AttendanceDto(
     string id,
     string nombre
     );
+

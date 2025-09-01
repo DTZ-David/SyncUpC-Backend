@@ -17,14 +17,14 @@ public class Attendance : BaseEntity<string>
 
 public class UserAttendance
 {
-    public UserAttendance(string userId, string checkInTime, string? checkOutTime)
+    public UserAttendance(string userId, string checkInTime)
     {
         UserId = userId;
         CheckInTime = checkInTime;
-        CheckOutTime = checkOutTime;
+
     }
 
     public string UserId { get; set; }
     public string CheckInTime { get; set; }
-    public string? CheckOutTime { get; set; }
+
 }

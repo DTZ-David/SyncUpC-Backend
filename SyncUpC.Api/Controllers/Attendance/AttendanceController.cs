@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using SyncUpC.Application.UseCases.AttendanceUseCase.Commands.FillAttendance;
 using SyncUpC.Application.UseCases.AttendanceUseCase.Dtos;
+using SyncUpC.Application.UseCases.AttendanceUseCase.Queries.GetAllAttendanceByEvent;
+using SyncUpC.Application.UseCases.RegistrationUseCases.Commands.RegisterEvent;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
+using SyncUpC.Domain.Entities.Registration;
 using SyncUpC.WebApi.Common.Constants;
 
 namespace SyncUpC.WebApi.Controllers.AttendanceController;
@@ -20,6 +23,25 @@ public class AttendanceController : BaseController
     [HttpPost]
     [Route("CheckIn")]
     public async Task<ActionResult<Response<AttendanceDto>>> SavedEvents([FromBody] CheckInAttendanceCommand command)
+    {
+        return await Mediator.Send(command);
+    }
+
+    /// <response code="200">Successful query.</response>
+    /// <response code="404">Query error, client's headquarters not found.</response>
+    [Authorize]
+    [HttpPost]
+    [Route("RegisterEvent")]
+    public async Task<ActionResult<Response<Registration>>> RegisterEvent([FromBody] RegisterEventCommand command)
+    {
+        return await Mediator.Send(command);
+    }
+
+    /// <response code="200">Successful query.</response>
+    /// <response code="404">Query error, client's headquarters not found.</response>
+    [HttpPost]
+    [Route("AttendanceList")]
+    public async Task<ActionResult<Response<GetAttendanceRecordDto>>> GetAttendance([FromBody] GetAllAttendanceByEventQuery command)
     {
         return await Mediator.Send(command);
     }

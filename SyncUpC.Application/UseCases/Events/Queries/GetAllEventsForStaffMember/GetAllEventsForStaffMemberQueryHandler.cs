@@ -40,21 +40,36 @@ public class GetAllEventsForStaffMemberQueryHandler : IRequestHandler<GetAllEven
 
         // Construir manualmente los DTOs incluyendo el campo IsSaved
         var resultDto = orderedEvents.Select(e => new AcademicEventDto(
-            e.Id,
-            e.EventTitle,
-            e.EventObjective,
-            e.StartDate,
-            e.EventLocation,
-            e.TargetTeachers,
-            e.TargetStudents,
-            e.TargetAdministrative,
-            e.TargetGeneral,
-            e.AdditionalDetails,
-            e.ImageUrls,
-            e.ParticipantProfilePictures,
-            e.Tags,
-            favoriteEventIds.Contains(e.Id.ToString())
-        ));
+         e.Id,
+         e.EventTitle,
+         e.EventObjective,
+         e.StartDate,
+         e.EndDate,
+
+         // Ubicación
+         new CampusDto(e.Campus.Name),
+         new SpaceDto(e.Space.Name),
+
+         // Públicos objetivos
+         e.TargetTeachers,
+         e.TargetStudents,
+         e.TargetAdministrative,
+         e.TargetGeneral,
+
+         // Extras
+         e.AdditionalDetails,
+         e.ImageUrls,
+         e.ParticipantProfilePictures,
+
+         // Clasificación
+         e.Categories?.Select(c => new EventCategoryDto(c.Name)).ToList() ?? new List<EventCategoryDto>(),
+         e.EventTypes?.Select(t => new EventTypeDto(t.Name)).ToList() ?? new List<EventTypeDto>(),
+
+
+         favoriteEventIds.Contains(e.Id.ToString()),
+         e.Status
+         ));
+
 
         return new OkObjectResult(new Response<IEnumerable<AcademicEventDto>>((int)MessageStatusCode.Success, resultDto));
     }

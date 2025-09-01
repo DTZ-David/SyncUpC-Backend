@@ -10,9 +10,14 @@ public interface IUnitOfWork
     IClaimService ClaimsService { get; }
     IAttendanceService AttendanceService { get; }
     IEmailService EmailService { get; }
+    IRegistrationService RegistrationService { get; }
     IQRService QRService { get; }
     IEventService EventService { get; }
     IFacultyService FacultyService { get; }
     ICareerService CareerService { get; }
     IForumService ForumService { get; }
+    ICampusService CampusService { get; }
+    ISpaceService SpaceService { get; }
+    IEventTypeService EventTypeService { get; }
+    IEventCategoryService EventCategoryService { get; }
 }

@@ -43,6 +43,7 @@ namespace SyncUpC.Application.UseCases.Bookmarks.Commands.SavedEvents
 
             var eventDto = _mapper.Map<AcademicEventDto>(academicEvent);
 
+
             return new CreatedResult(string.Empty, new Response<AcademicEventDto>((int)MessageStatusCode.Create, eventDto));
         }
     }
