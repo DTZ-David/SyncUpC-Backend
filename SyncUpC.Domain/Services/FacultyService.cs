@@ -20,6 +20,17 @@ public class FacultyService : IFacultyService
         return faculties.ToList();
     }
 
+    public async Task<Faculty> GetFacultyByCareerId(string careerId)
+    {
+        var faculty = (await _facultyRepository
+            .FindAsync(f => f.Careers.Any(c => c.Id == careerId)))
+            .FirstOrDefault();
+
+        return faculty ?? throw new Exception("Faculty not found");
+    }
+
+
+
     public async Task<Faculty> GetFacultyById(string id)
     {
         var faculty = (await _facultyRepository.FindAsync(f => f.Id == id)).FirstOrDefault();

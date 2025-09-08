@@ -55,7 +55,7 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
                 whatsApp: request.NotificationPreferences.ForumMention.WhatsApp
             )
         );
-
+        var faculty = await _unitOfWork.FacultyService.GetFacultyById(request.CareerId);
         var student = new Student(
             email: request.Email,
             password: request.Password,
@@ -63,6 +63,7 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
             lastName: request.LastName,
             phoneNumber: request.PhoneNumber,
             profilePhotoUrl: request.ProfilePhotoUrl,
+            faculty: faculty,
             career: career,
             isActive: true,
             notificationPreferences: notificationPreferences

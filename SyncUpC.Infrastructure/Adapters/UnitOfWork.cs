@@ -6,7 +6,7 @@ namespace SyncUpC.Infraestructure.Adapters;
 
 public class UnitOfWork : IUnitOfWork
 {
-    public UnitOfWork(IAccountService accountService, IClaimService claimsService, IEventService eventService, IUserService userService, IQRService qRService, IEmailService emailService, IFacultyService facultyService, ICareerService careerService, IAttendanceService attendanceService, IForumService forumService, ISpaceService spaceService, ICampusService campusService, IEventCategoryService eventCategoryService, IEventTypeService eventTypeService, IRegistrationService registrationService)
+    public UnitOfWork(IAccountService accountService, IClaimService claimsService, IEventService eventService, IUserService userService, IQRService qRService, IEmailService emailService, IFacultyService facultyService, ICareerService careerService, IAttendanceService attendanceService, IForumService forumService, IRegistrationService registrationService, ISpaceService spaceService, ICampusService campusService, IEventCategoryService eventCategoryService, IEventTypeService eventTypeService, IEventImageService imageService)
     {
         AccountService = accountService;
         ClaimsService = claimsService;
@@ -18,11 +18,12 @@ public class UnitOfWork : IUnitOfWork
         CareerService = careerService;
         AttendanceService = attendanceService;
         ForumService = forumService;
+        RegistrationService = registrationService;
         SpaceService = spaceService;
         CampusService = campusService;
         EventCategoryService = eventCategoryService;
         EventTypeService = eventTypeService;
-        RegistrationService = registrationService;
+        EventImageService = imageService;
     }
 
     public IAccountService AccountService { get; }
@@ -40,5 +41,6 @@ public class UnitOfWork : IUnitOfWork
     public ICampusService CampusService { get; }
     public IEventCategoryService EventCategoryService { get; }
     public IEventTypeService EventTypeService { get; }
+    public IEventImageService EventImageService { get; }
 
 }

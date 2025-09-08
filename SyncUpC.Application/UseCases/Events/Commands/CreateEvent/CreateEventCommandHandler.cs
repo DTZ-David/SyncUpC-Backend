@@ -6,6 +6,7 @@ using SyncUpC.Domain.Common.Enums;
 using SyncUpC.Domain.Common.Exceptions;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.Domain.Entities.Events;
+using SyncUpC.Domain.Entities.User;
 using SyncUpC.Domain.Ports;
 namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
 {
@@ -61,7 +62,14 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 var type = await _unitOfWork.EventTypeService.GetEventType(id);
                 eventTypes.Add(type);
             }
+            var faculties = new List<Faculty>();
 
+            foreach (var careerId in careers)
+            {
+                var faculty = await _unitOfWork.FacultyService.GetFacultyByCareerId(careerId.Id);
+                if (faculty != null)
+                    faculties.Add(faculty);
+            }
             var eventStats = new EventStats(0, 0, 0);
 
             var newEvent = new AcademicEvent(
@@ -72,6 +80,7 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 request.EndDate,
                 campus,
                 space,
+                faculties,
                 careers,
                 request.TargetTeachers,
                 request.TargetStudents,

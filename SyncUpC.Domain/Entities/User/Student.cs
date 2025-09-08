@@ -3,6 +3,7 @@
     public class Student : User
     {
         public Career Career { get; set; }
+        public Faculty Faculty { get; set; }
         public Student(
            string email,
            string password,
@@ -12,10 +13,12 @@
            string profilePhotoUrl,
            bool isActive,
            Career career,
+           Faculty faculty,
            NotificationPreferences notificationPreferences
        ) : base(email, password, firstName, lastName, phoneNumber, UserRole.Student, profilePhotoUrl, isActive, notificationPreferences)
         {
             Career = career;
+            Faculty = faculty;
         }
     }
 }

@@ -15,7 +15,7 @@ public class MapperProfile : Profile
         CreateMap<Student, StudentDto>().ReverseMap();
         CreateMap<Career, CareerDto>().ReverseMap();
         CreateMap<Faculty, FacultiesDto>().ReverseMap();
-
+        CreateMap<EventImages, EventImagesDto>().ReverseMap();
         // Mapeos para DTOs de records - solo de entidad a DTO
         CreateMap<Campus, CampusDto>()
             .ConstructUsing(src => new CampusDto(src.Name ?? string.Empty));

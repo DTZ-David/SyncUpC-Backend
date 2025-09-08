@@ -8,5 +8,6 @@ public interface IUserService
     Task<User> GetUserByEmail(string email);
     Task<User> GetUserById(string id);
     Task<User> UpdateUser(User user);
+    Task<Dictionary<string, string>> GetUserFaculties(List<string> userIds);
 
 }

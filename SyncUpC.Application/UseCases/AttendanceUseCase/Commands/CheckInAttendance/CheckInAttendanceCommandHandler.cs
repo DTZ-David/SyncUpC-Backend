@@ -28,19 +28,33 @@ public class CheckInAttendanceCommandHandler : IRequestHandler<CheckInAttendance
         var user = await _unitOfWork.UserService.GetUserById(claims.UserId)
             ?? throw new BusinessException("ERROR DE AUTENTICIDAD", (int)MessageStatusCode.NotFound);
 
+        // Consultar el evento
+        var eventEntity = await _unitOfWork.EventService.GetEventById(request.eventId)
+            ?? throw new BusinessException("El evento no existe", (int)MessageStatusCode.NotFound);
+
+        var now = DateTime.UtcNow;
+        if (eventEntity.EndDate < now)
+        {
+            throw new BusinessException("El evento ya finalizó, no es posible registrar asistencia.", (int)MessageStatusCode.BadRequest);
+        }
+
+        if (eventEntity.StartDate > now)
+        {
+            throw new BusinessException("El evento aún no ha iniciado, no es posible registrar asistencia.", (int)MessageStatusCode.BadRequest);
+        }
+
         // Crear el objeto UserAttendance
         var userAttendance = new UserAttendance(
             userId: user.Id,
-            checkInTime: DateTime.Now.ToString()
+            checkInTime: now.ToString("o")
         );
 
-        // Registrar asistencia (crear o actualizar)
+
         var attendance = await _unitOfWork.AttendanceService.SubmitAnAttendance(userAttendance, request.eventId);
 
-        var events = await _unitOfWork.EventService.GetEventById(attendance.EventId);
-
-        var attendanceDto = new AttendanceDto(events.Id, events.EventTitle);
+        var attendanceDto = new AttendanceDto(eventEntity.Id, eventEntity.EventTitle);
 
         return new CreatedResult(string.Empty, new Response<AttendanceDto>((int)MessageStatusCode.Create, attendanceDto));
     }
+
 }

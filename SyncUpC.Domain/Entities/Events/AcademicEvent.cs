@@ -13,6 +13,7 @@ public class AcademicEvent : BaseEntity<string>
         DateTime endDate,
         Campus campus,
         Space space,
+        List<Faculty> faculty,
         List<Career> careers,
         bool targetTeachers,
         bool targetStudents,
@@ -37,6 +38,7 @@ public class AcademicEvent : BaseEntity<string>
         EndDate = endDate;
         Campus = campus;
         Space = space;
+        Faculties = faculty;
         Careers = careers;
         TargetTeachers = targetTeachers;
         TargetStudents = targetStudents;
@@ -66,6 +68,7 @@ public class AcademicEvent : BaseEntity<string>
     public Space Space { get; set; }
 
     // Públicos objetivos
+    public List<Faculty> Faculties { get; set; } = new();
     public List<Career> Careers { get; set; } = new();
     public bool TargetTeachers { get; set; }
     public bool TargetStudents { get; set; }

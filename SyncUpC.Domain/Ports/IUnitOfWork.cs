@@ -13,6 +13,7 @@ public interface IUnitOfWork
     IRegistrationService RegistrationService { get; }
     IQRService QRService { get; }
     IEventService EventService { get; }
+    IEventImageService EventImageService { get; }
     IFacultyService FacultyService { get; }
     ICareerService CareerService { get; }
     IForumService ForumService { get; }

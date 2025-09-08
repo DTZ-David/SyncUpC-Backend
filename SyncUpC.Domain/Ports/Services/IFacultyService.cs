@@ -6,4 +6,5 @@ public interface IFacultyService
 {
     Task<Faculty> GetFacultyById(string id);
     Task<List<Faculty>> GetAllFacultyAsync();
+    Task<Faculty> GetFacultyByCareerId(string id);
 }

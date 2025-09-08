@@ -32,12 +32,12 @@ public class EventService : IEventService
         var ev = await _eventRepository.GetById(eventId);
         if (ev != null)
             await EnsureEventStatusIsUpToDate(ev);
-        return ev;
+        return ev!;
     }
 
     public async Task<List<AcademicEvent>> GetAllEvents()
     {
-        var events = await _eventRepository.GetAll();
+        var events = await _eventRepository.FindAsync(x => x.Status != "completed");
         await EnsureEventsStatusAreUpToDate(events);
         return events.ToList();
     }
@@ -45,7 +45,7 @@ public class EventService : IEventService
     public async Task<List<AcademicEvent>> GetEventsForU(string careerId)
     {
         var events = await _eventRepository.FindAsync(e =>
-            e.Careers.Any(c => c.Id == careerId));
+            e.Careers.Any(c => c.Id == careerId) && e.Status != "completed");
 
         await EnsureEventsStatusAreUpToDate(events);
         return events.ToList();
@@ -89,5 +89,37 @@ public class EventService : IEventService
         {
             await EnsureEventStatusIsUpToDate(ev);
         }
+    }
+
+    public async Task<List<AcademicEvent>> GetAllEventsForMetrics()
+    {
+        var events = await _eventRepository.GetAll();
+        return events.ToList();
+    }
+
+    public async Task<List<AcademicEvent>> GetEventsFilteredAsync(DateTime? dateFrom, DateTime? dateTo, string? faculty, string? program, string? eventType, string? category)
+    {
+        var events = await _eventRepository.GetAll(); // devuelve IEnumerable<AcademicEvent>
+        var query = events.AsQueryable();
+
+        if (dateFrom.HasValue)
+            query = query.Where(e => e.StartDate >= dateFrom.Value);
+
+        if (dateTo.HasValue)
+            query = query.Where(e => e.StartDate <= dateTo.Value);
+
+        if (!string.IsNullOrEmpty(program))
+            query = query.Where(e => e.Faculties != null && e.Faculties.Any(c => c.Id == faculty));
+
+        if (!string.IsNullOrEmpty(program))
+            query = query.Where(e => e.Careers != null && e.Careers.Any(c => c.Id == program));
+
+        if (!string.IsNullOrEmpty(eventType))
+            query = query.Where(e => e.EventTypes != null && e.EventTypes.Any(et => et.Id == eventType));
+
+        if (!string.IsNullOrEmpty(category))
+            query = query.Where(e => e.EventTypes != null && e.EventTypes.Any(et => et.Id == category));
+
+        return query.ToList();
     }
 }
