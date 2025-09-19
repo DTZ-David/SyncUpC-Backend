@@ -31,16 +31,15 @@ public class GetUserEventImagesQueryHandler : IRequestHandler<GetUserEventImages
         // Obtener todas las imágenes subidas por el usuario
         var eventImages = await _unitOfWork.EventImageService.GetEventImagesByUserId(user.Id);
 
-        // Mapear a DTOs
         var eventImagesDtos = eventImages.Select(ei => new EventImagesDto(
-            ei.Id,
-            ei.EventId,
-            ei.ImageUrls,
-            ei.UploadedByUserId,
-            ei.UploadedByUserName,
-            ei.UploadedAt,
-            ei.Description
-        )).ToList();
+             ei.Id,
+             ei.EventId,
+             ei.EventTitle,
+             ei.EventDate,
+             ei.ImageUrls,
+             ei.UploadedByUserId,
+             ei.UploadedByUserName
+         )).ToList();
 
         return new OkObjectResult(new Response<List<EventImagesDto>>((int)MessageStatusCode.Success, eventImagesDtos));
     }

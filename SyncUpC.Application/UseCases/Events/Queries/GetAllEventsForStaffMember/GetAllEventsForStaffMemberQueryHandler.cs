@@ -65,7 +65,8 @@ public class GetAllEventsForStaffMemberQueryHandler : IRequestHandler<GetAllEven
          e.Categories?.Select(c => new EventCategoryDto(c.Name)).ToList() ?? new List<EventCategoryDto>(),
          e.EventTypes?.Select(t => new EventTypeDto(t.Name)).ToList() ?? new List<EventTypeDto>(),
 
-
+         e.RequiresRegistration,
+         false,
          favoriteEventIds.Contains(e.Id.ToString()),
          e.Status
          ));

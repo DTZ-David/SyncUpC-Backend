@@ -54,7 +54,9 @@ public class MapperProfile : Profile
                 src.EventTypes != null
                     ? src.EventTypes.Select(et => new EventTypeDto(et.Name ?? string.Empty)).ToList()
                     : new List<EventTypeDto>(),
-                false, // IsSaved - siempre false al mapear desde entidad
+                src.RequiresRegistration,
+                false,
+                false,
                 src.Status ?? string.Empty
             ));
     }

@@ -6,7 +6,6 @@ using SyncUpC.Domain.Services;
 [ApplicationService]
 public class EmailService : IEmailService
 {
-
     public async Task SendEmailWithAttachmentAsync(string to, string subject, string body, byte[] attachmentBytes, string attachmentName)
     {
         var client = new SendGridClient(_sendGridApiKey);

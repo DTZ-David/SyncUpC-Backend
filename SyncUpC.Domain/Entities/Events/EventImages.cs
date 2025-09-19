@@ -9,16 +9,16 @@ public class EventImages : BaseEntity<string>
         List<string> imageUrls,
         string uploadedByUserId,
         string uploadedByUserName,
-        DateTime uploadedAt,
-        string? description = null
+        DateTime eventDate,
+        string eventTitle
     )
     {
         EventId = eventId;
         ImageUrls = imageUrls ?? new List<string>();
         UploadedByUserId = uploadedByUserId;
         UploadedByUserName = uploadedByUserName;
-        UploadedAt = uploadedAt;
-        Description = description ?? string.Empty;
+        EventDate = eventDate;
+        EventTitle = eventTitle;
         IsActive = true;
     }
 
@@ -26,7 +26,7 @@ public class EventImages : BaseEntity<string>
     public List<string> ImageUrls { get; set; } = new();
     public string UploadedByUserId { get; set; }
     public string UploadedByUserName { get; set; }
-    public DateTime UploadedAt { get; set; }
-    public string Description { get; set; } = string.Empty;
+    public DateTime EventDate { get; set; }
+    public string EventTitle { get; set; } = string.Empty;
     public bool IsActive { get; set; } = true;
 }

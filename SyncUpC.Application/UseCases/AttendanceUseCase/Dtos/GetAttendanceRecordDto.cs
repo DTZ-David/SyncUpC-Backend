@@ -8,8 +8,11 @@ public record GetAttendanceRecordDto
     );
 
 public record UserAttendanceDto(
-    string Nombre,
-    string Apellido,
-    string Numero,
-    string CheckInTime
+        string Name,
+        string LastName,
+        string Email,
+        string PhoneNumber,
+        string? CheckInTime,
+        string? CareerName,    // Nuevo campo
+        string? FacultyName    // Nuevo campo
     );

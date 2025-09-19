@@ -17,6 +17,45 @@ public class RegistrationService : IRegistrationService
         _userReporistoy = userReporistoy;
     }
 
+    public async Task<bool> DeleteRegistration(string eventId, string userId)
+    {
+        try
+        {
+
+            var registrationList = await _attendanceRepository.FindAsync(r => r.EventId == eventId);
+            var registration = registrationList.FirstOrDefault();
+
+            if (registration == null)
+            {
+
+                return false;
+            }
+
+            var userRegistration = registration.RegistratedUsers
+                .FirstOrDefault(ur => ur.UserId == userId);
+
+            if (userRegistration == null)
+            {
+                // El usuario no está registrado en este evento
+                return false;
+            }
+
+            // Remover el usuario de la lista de registrados
+            registration.RegistratedUsers.Remove(userRegistration);
+
+            await _attendanceRepository.Update(registration);
+
+
+            return true;
+        }
+        catch (Exception)
+        {
+            // Log the exception if you have logging configured
+            // _logger.LogError(ex, "Error deleting registration for eventId: {EventId}, userId: {UserId}", eventId, userId);
+            return false;
+        }
+    }
+
     public async Task<List<Registration>> GetAllRegistration()
     {
         var registration = await _attendanceRepository.GetAll();

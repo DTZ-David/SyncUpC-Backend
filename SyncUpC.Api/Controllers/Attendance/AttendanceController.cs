@@ -4,6 +4,7 @@ using SyncUpC.Application.UseCases.AttendanceUseCase.Commands.FillAttendance;
 using SyncUpC.Application.UseCases.AttendanceUseCase.Dtos;
 using SyncUpC.Application.UseCases.AttendanceUseCase.Queries.GetAllAttendanceByEvent;
 using SyncUpC.Application.UseCases.RegistrationUseCases.Commands.RegisterEvent;
+using SyncUpC.Application.UseCases.RegistrationUseCases.Commands.UnregisterEvent;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.Domain.Entities.Registration;
 using SyncUpC.WebApi.Common.Constants;
@@ -33,6 +34,16 @@ public class AttendanceController : BaseController
     [HttpPost]
     [Route("RegisterEvent")]
     public async Task<ActionResult<Response<Registration>>> RegisterEvent([FromBody] RegisterEventCommand command)
+    {
+        return await Mediator.Send(command);
+    }
+
+    /// <response code="200">Successful query.</response>
+    /// <response code="404">Query error, client's headquarters not found.</response>
+    [Authorize]
+    [HttpPost]
+    [Route("DeleteRegistration")]
+    public async Task<ActionResult<Response<Registration>>> DeleteRegistration([FromBody] UnregisterEventCommand command)
     {
         return await Mediator.Send(command);
     }

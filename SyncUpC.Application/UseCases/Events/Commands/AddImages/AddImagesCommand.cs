@@ -7,6 +7,5 @@ namespace SyncUpC.Application.UseCases.Events.Commands.AddImages;
 
 public record AddImagesCommand(
     string EventId,
-    List<string> ImageUrls,
-    string? Description = null
+    List<string> ImageUrls
 ) : IRequest<ActionResult<Response<EventImagesDto>>>;

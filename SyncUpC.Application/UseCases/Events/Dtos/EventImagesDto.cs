@@ -3,9 +3,9 @@
 public record EventImagesDto(
     string Id,
     string EventId,
+    string EventTitle,
+    DateTime EventDate,
     List<string> ImageUrls,
     string UploadedByUserId,
-    string UploadedByUserName,
-    DateTime UploadedAt,
-    string Description
+    string UploadedByUserName
 );

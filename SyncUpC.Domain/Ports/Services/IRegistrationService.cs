@@ -8,6 +8,7 @@ namespace SyncUpC.Domain.Ports.Services
         Task<List<Registration>> GetAllRegistration();
         Task<Registration> GetRegistrationOfEvent(string eventId);
         Task<List<string>> GetEmailsRegistered(string eventId);
+        Task<bool> DeleteRegistration(string eventId, string userId);
 
     }
 }

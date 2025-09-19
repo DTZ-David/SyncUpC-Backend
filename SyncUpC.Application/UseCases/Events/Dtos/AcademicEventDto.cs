@@ -48,7 +48,8 @@ public record AcademicEventDto
     // Clasificación
     List<EventCategoryDto> Categories,
     List<EventTypeDto> EventTypes,
-
+    bool? RequiresRegistration,
     bool? IsSaved,
+    bool? IsRegistered,
     string Status
 );

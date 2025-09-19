@@ -39,11 +39,11 @@ internal class GetEventImagesByIdQueryHandler : IRequestHandler<GetEventImagesBy
         var eventImagesDtos = eventImages.Select(ei => new EventImagesDto(
             ei.Id,
             ei.EventId,
+            ei.EventTitle,
+            ei.EventDate,
             ei.ImageUrls,
             ei.UploadedByUserId,
-            ei.UploadedByUserName,
-            ei.UploadedAt,
-            ei.Description
+            ei.UploadedByUserName
         )).ToList();
 
         return new OkObjectResult(new Response<List<EventImagesDto>>((int)MessageStatusCode.Success, eventImagesDtos));

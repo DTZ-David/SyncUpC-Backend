@@ -8,10 +8,12 @@ namespace SyncUpC.Domain.Services;
 public class EventImageService : IEventImageService
 {
     private readonly IGenericRepository<EventImages> _eventImagesRepository;
+    private readonly IGenericRepository<AcademicEvent> _eventRepository;
 
-    public EventImageService(IGenericRepository<EventImages> eventImagesRepository)
+    public EventImageService(IGenericRepository<EventImages> eventImagesRepository, IGenericRepository<AcademicEvent> eventRepository)
     {
         _eventImagesRepository = eventImagesRepository;
+        _eventRepository = eventRepository;
     }
 
     public async Task<EventImages> CreateEventImages(EventImages eventImages)
@@ -40,7 +42,7 @@ public class EventImageService : IEventImageService
         var allEventImages = await _eventImagesRepository.GetAll();
         return allEventImages
             .Where(ei => ei.EventId == eventId && ei.IsActive)
-            .OrderByDescending(ei => ei.UploadedAt)
+            .OrderByDescending(ei => ei.EventDate)
             .ToList();
     }
 
@@ -52,10 +54,23 @@ public class EventImageService : IEventImageService
 
     public async Task<List<EventImages>> GetEventImagesByUserId(string userId)
     {
-        var allEventImages = await _eventImagesRepository.GetAll();
-        return allEventImages
-            .Where(ei => ei.UploadedByUserId == userId && ei.IsActive)
-            .OrderByDescending(ei => ei.UploadedAt)
+        // Obtener todos los eventos académicos del usuario que están completados
+        var completedEvents = await _eventRepository.GetAll();
+        var userCompletedEvents = completedEvents
+            .Where(ae => ae.Organizer.Id == userId && ae.Status == "completed") // Ajusta el status según tu aplicación
+            .ToList();
+
+        // Transformar AcademicEvent a EventImages
+        return userCompletedEvents
+            .Select(ae => new EventImages(
+                eventId: ae.Id,
+                imageUrls: ae.ImageUrls,
+                uploadedByUserId: ae.Organizer.Id,
+                uploadedByUserName: ae.Organizer.Name, // Asumiendo que Organizer tiene una propiedad Name
+                eventDate: ae.StartDate,
+                eventTitle: ae.EventTitle
+            ))
+            .OrderByDescending(ei => ei.EventDate)
             .ToList();
     }
 }

@@ -31,6 +31,12 @@ namespace SyncUpC.Application.UseCases.Events.Queries.GetAllEvents
             var orderedEvents = events.OrderBy(e => e.StartDate);
             var favoriteEventIds = user.FavoriteEventIds ?? new List<string>();
 
+            // 🔍 NUEVA LÓGICA: Obtener todos los registros del usuario
+            var userRegistrations = await _unitOfWork.RegistrationService.GetAllRegistration();
+            var userRegisteredEventIds = userRegistrations
+                .Where(r => r.RegistratedUsers.Any(ru => ru.UserId == userClaim.UserId))
+                .Select(r => r.EventId)
+                .ToHashSet();
 
             var resultDto = orderedEvents.Select(e => new AcademicEventDto(
          e.Id,
@@ -58,8 +64,10 @@ namespace SyncUpC.Application.UseCases.Events.Queries.GetAllEvents
          e.Categories?.Select(c => new EventCategoryDto(c.Name)).ToList() ?? new List<EventCategoryDto>(),
          e.EventTypes?.Select(t => new EventTypeDto(t.Name)).ToList() ?? new List<EventTypeDto>(),
 
+         e.RequiresRegistration,
 
          favoriteEventIds.Contains(e.Id.ToString()),
+         userRegisteredEventIds.Contains(e.Id.ToString()),
          e.Status
          ));
 

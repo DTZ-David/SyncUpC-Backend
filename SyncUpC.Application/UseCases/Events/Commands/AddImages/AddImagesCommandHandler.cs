@@ -43,8 +43,8 @@ internal class AddImagesCommandHandler : IRequestHandler<AddImagesCommand, Actio
             imageUrls: request.ImageUrls,
             uploadedByUserId: user.Id,
             uploadedByUserName: $"{user.Name} {user.LastName}",
-            uploadedAt: DateTime.UtcNow,
-            description: request.Description
+            eventDate: academicEvent.StartDate,
+            eventTitle: academicEvent.EventTitle
         );
 
         // Guardar en la colección EventImages
@@ -61,11 +61,11 @@ internal class AddImagesCommandHandler : IRequestHandler<AddImagesCommand, Actio
         var resultDto = new EventImagesDto(
             eventImages.Id,
             eventImages.EventId,
+            eventImages.EventTitle,
+            eventImages.EventDate,
             eventImages.ImageUrls,
             eventImages.UploadedByUserId,
-            eventImages.UploadedByUserName,
-            eventImages.UploadedAt,
-            eventImages.Description
+            eventImages.UploadedByUserName
         );
 
         return new OkObjectResult(new Response<EventImagesDto>((int)MessageStatusCode.Success, resultDto));
