@@ -54,7 +54,10 @@ public class MapperProfile : Profile
                 src.EventTypes != null
                     ? src.EventTypes.Select(et => new EventTypeDto(et.Name ?? string.Empty)).ToList()
                     : new List<EventTypeDto>(),
+                 src.MaxCapacity,
+                 src.MeetingUrl!,
                 src.RequiresRegistration,
+               
                 false,
                 false,
                 src.Status ?? string.Empty

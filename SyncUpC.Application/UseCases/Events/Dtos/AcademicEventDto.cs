@@ -48,6 +48,8 @@ public record AcademicEventDto
     // Clasificación
     List<EventCategoryDto> Categories,
     List<EventTypeDto> EventTypes,
+    int MaxCapacity,
+    string MeetingUrl,
     bool? RequiresRegistration,
     bool? IsSaved,
     bool? IsRegistered,

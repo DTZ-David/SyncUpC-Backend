@@ -135,6 +135,8 @@ namespace SyncUpC.Application.UseCases.Events.Commands.CreateEvent
                 newEvent.ParticipantProfilePictures ?? new List<string>(),
                 categories.Select(c => new EventCategoryDto(c.Name)).ToList(),
                 eventTypes.Select(et => new EventTypeDto(et.Name)).ToList(),
+                newEvent.MaxCapacity,
+                newEvent.MeetingUrl!,
                 newEvent.RequiresRegistration,
                 false,
                 false,

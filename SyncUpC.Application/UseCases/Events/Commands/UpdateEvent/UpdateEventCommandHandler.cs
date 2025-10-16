@@ -105,6 +105,8 @@ namespace SyncUpC.Application.UseCases.Events.Commands.UpdateEvent
                 academicEvent.ParticipantProfilePictures ?? new List<string>(),
                 categories.Select(c => new EventCategoryDto(c.Name)).ToList(),
                 eventTypes.Select(et => new EventTypeDto(et.Name)).ToList(),
+                academicEvent.MaxCapacity,
+                academicEvent.MeetingUrl!,
                 academicEvent.RequiresRegistration,
                 false,
                 false,

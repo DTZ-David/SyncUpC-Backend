@@ -63,7 +63,8 @@ namespace SyncUpC.Application.UseCases.Events.Queries.GetAllEvents
          // Clasificación
          e.Categories?.Select(c => new EventCategoryDto(c.Name)).ToList() ?? new List<EventCategoryDto>(),
          e.EventTypes?.Select(t => new EventTypeDto(t.Name)).ToList() ?? new List<EventTypeDto>(),
-
+         e.MaxCapacity,
+         e.MeetingUrl!,
          e.RequiresRegistration,
 
          favoriteEventIds.Contains(e.Id.ToString()),

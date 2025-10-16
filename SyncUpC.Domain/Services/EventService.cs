@@ -76,12 +76,15 @@ public class EventService : IEventService
     // --- Métodos privados reutilizables ---
     private async Task EnsureEventStatusIsUpToDate(AcademicEvent ev)
     {
-        if (ev.EndDate < DateTime.UtcNow && ev.Status != "completed")
+        if (ev.Status == "completed") return; // ya está actualizado
+
+        if (ev.EndDate < DateTime.UtcNow)
         {
             ev.Status = "completed";
             await _eventRepository.Update(ev);
         }
     }
+
 
     private async Task EnsureEventsStatusAreUpToDate(IEnumerable<AcademicEvent> events)
     {
