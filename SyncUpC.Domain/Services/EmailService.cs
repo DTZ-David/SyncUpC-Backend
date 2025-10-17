@@ -6,8 +6,8 @@ using SyncUpC.Domain.Services;
 [ApplicationService]
 public class EmailService : IEmailService
 {
-  
 
+  
     public async Task SendEmailWithAttachmentAsync(string to, string subject, string body, byte[] attachmentBytes, string attachmentName)
     {
         using var message = new MailMessage(_gmailUser, to, subject, body)

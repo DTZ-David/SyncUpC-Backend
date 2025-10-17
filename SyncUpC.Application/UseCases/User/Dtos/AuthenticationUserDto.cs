@@ -1,6 +1,7 @@
 ﻿namespace SyncUpC.Application.UseCases.User.Dtos;
 
 public record AuthenticationUserDto(
+    string Id,
     string Token,
     string RefreshToken,  // ✅ NUEVO
     string Name,

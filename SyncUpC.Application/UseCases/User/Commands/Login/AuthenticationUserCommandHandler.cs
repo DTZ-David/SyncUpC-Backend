@@ -33,6 +33,7 @@ public class AuthenticationUserCommandHandler : IRequestHandler<AuthenticationUs
 
 
         var userDetails = new AuthenticationUserDto(
+            Id: user.Id,
             Token: accessToken,
             RefreshToken: refreshToken.Token,
             Name: $"{user.Name} {user.LastName}",

@@ -1,24 +1,30 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+using SyncUpC.Application.UseCases.AttendanceUseCase.Commands.FillAttendance;
 using SyncUpC.Application.UseCases.AttendanceUseCase.Dtos;
 using SyncUpC.Domain.Common.Enums;
 using SyncUpC.Domain.Common.Exceptions;
 using SyncUpC.Domain.Common.Wrappers.CustomResponse;
 using SyncUpC.Domain.Entities.Attendance;
 using SyncUpC.Domain.Ports;
-using QuestPDF.Fluent;
-using QuestPDF.Helpers;
-using QuestPDF.Infrastructure;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SyncUpC.Application.UseCases.AttendanceUseCase.Commands.FillAttendance;
+namespace SyncUpC.Application.UseCases.AttendanceUseCase.Commands.CheckInAttendanceAdmin;
 
-public class CheckInAttendanceCommandHandler : IRequestHandler<CheckInAttendanceCommand, ActionResult<Response<AttendanceDto>>>
+internal class CheckInAttendanceAdminCommandHandler : IRequestHandler<CheckInAttendanceAdminCommand, ActionResult<Response<AttendanceDto>>>
 {
     private readonly IMapper _mapper;
     private readonly IUnitOfWork _unitOfWork;
 
-    public CheckInAttendanceCommandHandler(IMapper mapper, IUnitOfWork unitOfWork)
+    public CheckInAttendanceAdminCommandHandler(IMapper mapper, IUnitOfWork unitOfWork)
     {
         _mapper = mapper;
         _unitOfWork = unitOfWork;
@@ -27,11 +33,11 @@ public class CheckInAttendanceCommandHandler : IRequestHandler<CheckInAttendance
         QuestPDF.Settings.License = LicenseType.Community;
     }
 
-    public async Task<ActionResult<Response<AttendanceDto>>> Handle(CheckInAttendanceCommand request, CancellationToken cancellationToken)
+    public async Task<ActionResult<Response<AttendanceDto>>> Handle(CheckInAttendanceAdminCommand request, CancellationToken cancellationToken)
     {
         // Obtener usuario autenticado
         var claims = await _unitOfWork.ClaimsService.GetUserClaim();
-        var user = await _unitOfWork.UserService.GetUserById(claims.UserId)
+        var user = await _unitOfWork.UserService.GetUserById(request.userId)
             ?? throw new BusinessException("ERROR DE AUTENTICIDAD", (int)MessageStatusCode.NotFound);
 
         // Consultar el evento
@@ -227,4 +233,7 @@ public class CheckInAttendanceCommandHandler : IRequestHandler<CheckInAttendance
         </body>
         </html>";
     }
+
+   
+
 }
